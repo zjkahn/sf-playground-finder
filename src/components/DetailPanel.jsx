@@ -1,4 +1,31 @@
 import React, { useState, useEffect } from 'react'
+import { getStreetViewUrl } from '../hooks/useParkImage'
+function ParkPhoto({ name, lat, lng }) {
+  const src = getStreetViewUrl(lat, lng, 800, 450)
+  const [failed, setFailed] = useState(false)
+  useEffect(() => setFailed(false), [lat, lng])
+  if (!src || failed) return null
+  return (
+    // 16:9 ratio container — image fills it without stretching
+    <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%', background: 'var(--mist)' }}>
+      <img
+        src={src}
+        alt={name}
+        onError={() => setFailed(true)}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+      />
+      <div style={{
+        position: 'absolute', bottom: 0, left: 0, right: 0,
+        background: 'linear-gradient(transparent, rgba(0,0,0,.45))',
+        padding: '24px 10px 6px',
+        fontSize: '.68rem', color: 'rgba(255,255,255,.8)',
+      }}>
+        📷 Google Street View
+      </div>
+    </div>
+  )
+}
+
 const INFO_FIELDS = [
   ['propertytype', 'Type'],
   ['acres',        'Acres'],
@@ -26,6 +53,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
 
   return (
     <div className="detail-panel">
+      <ParkPhoto name={playground.name} lat={playground.lat} lng={playground.lng} />
       <div className="detail-header">
         <div>
           <div className="detail-title">{playground.name}</div>
