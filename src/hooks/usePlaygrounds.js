@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const PARKS_URL      = 'https://data.sfgov.org/resource/gtr9-ntp6.json?$limit=500'
-const FACILITIES_URL = 'https://data.sfgov.org/resource/ib5c-xgwu.json?$limit=2000&$select=property_id,facility_type'
+const FACILITIES_URL = 'https://data.sfgov.org/resource/ib5c-xgwu.json?$limit=5000&$select=property_id,facility_type'
 
 const PARK_TYPES = new Set(['neighborhood park or playground', 'mini park', 'regional park'])
 
