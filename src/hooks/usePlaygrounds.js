@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 // SF Recreation & Park Properties dataset
 const API_URL = 'https://data.sfgov.org/resource/gtr9-ntp6.json?$limit=500'
 
-const PARK_TYPES = new Set(['playground', 'mini park', 'neighborhood park', 'tot lot', 'rec center'])
+const PARK_TYPES = new Set(['neighborhood park or playground', 'mini park', 'regional park'])
 
 function parsePG(raw) {
   const lat = parseFloat(raw.latitude)
