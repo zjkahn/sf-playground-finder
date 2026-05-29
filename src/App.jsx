@@ -69,11 +69,6 @@ export default function App() {
     )
   }
 
-  function handleSelectPark(pg) {
-    setSelected(pg)
-    setMobileTab('map')
-  }
-
   return (
     <div className="app-layout">
       <header className="app-header">
@@ -106,7 +101,7 @@ export default function App() {
             <PlaygroundList
               playgrounds={filtered}
               selected={selected}
-              onSelect={handleSelectPark}
+              onSelect={pg => setSelected(pg)}
               getEntry={getEntry}
               userLocation={userLocation}
             />
