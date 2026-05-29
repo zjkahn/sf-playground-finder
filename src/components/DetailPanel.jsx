@@ -29,7 +29,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
       <div style={{ display: 'flex', borderBottom: '1px solid var(--border)' }}>
 
         {/* Left: title, address, amenities, actions */}
-        <div style={{ flex: 1, padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 }}>
+        <div style={{ flex: 1, padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0 }}>
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
             <div style={{ minWidth: 0 }}>
               <div className="detail-title">{playground.name}</div>
@@ -70,7 +70,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
 
         {/* Right: Street View photo */}
         {showPhoto && (
-          <div style={{ width: '42%', flexShrink: 0, position: 'relative', minHeight: 160 }}>
+          <div style={{ width: '38%', flexShrink: 0, position: 'relative', minHeight: 140 }}>
             <img
               src={photoSrc}
               alt={playground.name}
@@ -91,14 +91,15 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
       </div>
 
       {/* Notes — full width below */}
-      <div className="detail-body" style={{ padding: '12px 16px' }}>
-        <div className="detail-section-label" style={{ marginBottom: 5 }}>My Notes</div>
+      <div style={{ padding: '8px 14px 12px' }}>
+        <div className="detail-section-label" style={{ marginBottom: 4 }}>My Notes</div>
         <textarea
           className="notes-textarea"
-          placeholder="Add your notes about this playground… (saved locally)"
+          placeholder="Add your notes… (saved locally)"
           value={notes}
           onChange={e => setNotes(e.target.value)}
           onBlur={handleNotesBlur}
+          style={{ minHeight: 52 }}
         />
       </div>
     </div>

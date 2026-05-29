@@ -295,7 +295,6 @@ html, body, #root {
   bottom: 0;
   left: 0;
   right: 0;
-  max-height: 55%;
   background: var(--white);
   border-top: 3px solid var(--sky);
   box-shadow: 0 -6px 24px rgba(0,0,0,.15);
@@ -425,6 +424,6 @@ html, body, #root {
   .sidebar { width: 100%; min-width: unset; height: 45vh; border-right: none; border-bottom: 2px solid var(--border); }
   .map-container { height: 55vh; }
   .app-header .subtitle { display: none; }
-  .detail-panel { max-height: 72%; }
+  .detail-panel { max-height: 65%; overflow-y: auto; }
   .playground-list { padding: 8px; gap: 6px; }
 }
