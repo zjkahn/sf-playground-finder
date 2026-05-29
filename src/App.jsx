@@ -24,6 +24,7 @@ export default function App() {
   const [selected, setSelected] = useState(null)
   const [userLocation, setUserLocation] = useState(null)
   const [geoError, setGeoError] = useState(null)
+  const [activeTab, setActiveTab] = useState('map')
   const mapRef = useRef(null)
 
   const neighborhoods = useMemo(() => {
@@ -78,7 +79,7 @@ export default function App() {
 
       <div className="main-content">
         {/* Sidebar */}
-        <aside className="sidebar">
+        <aside className={`sidebar ${activeTab === 'list' ? 'mobile-active' : 'mobile-hidden'}`}>
           <Filters
             filters={filters}
             onChange={setFilters}
@@ -108,7 +109,7 @@ export default function App() {
         </aside>
 
         {/* Map area */}
-        <div style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
+        <div className={`map-area ${activeTab === 'map' ? 'mobile-active' : 'mobile-hidden'}`}>
           <Map
             playgrounds={filtered}
             selected={selected}
@@ -136,6 +137,17 @@ export default function App() {
             />
           )}
         </div>
+      </div>
+
+      <div className="mobile-tab-bar">
+        <button className={`mobile-tab ${activeTab === 'map' ? 'active' : ''}`} onClick={() => setActiveTab('map')}>
+          <span>🗺️</span>
+          <span>Map</span>
+        </button>
+        <button className={`mobile-tab ${activeTab === 'list' ? 'active' : ''}`} onClick={() => setActiveTab('list')}>
+          <span>📋</span>
+          <span>List</span>
+        </button>
       </div>
     </div>
   )
