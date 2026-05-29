@@ -17,12 +17,15 @@ const selectedIcon = L.divIcon({
   iconAnchor: [15, 15],
 })
 
-const defaultIcon = L.divIcon({
-  className: '',
-  html: '<div style="width:14px;height:14px;background:#3a8c6e;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>',
-  iconSize: [14, 14],
-  iconAnchor: [7, 7],
-})
+function defaultIconForZoom(zoom) {
+  const s = zoom >= 16 ? 18 : zoom >= 15 ? 14 : zoom >= 14 ? 11 : 8
+  return L.divIcon({
+    className: '',
+    html: `<div style="width:${s}px;height:${s}px;background:#3a8c6e;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>`,
+    iconSize: [s, s],
+    iconAnchor: [s / 2, s / 2],
+  })
+}
 
 const SF_CENTER = [37.7749, -122.4194]
 
@@ -30,6 +33,7 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
   const containerRef = useRef(null)
   const mapRef = useRef(null)
   const markersRef = useRef({})
+  const selectedIdRef = useRef(null)
 
   // Init map
   useEffect(() => {
@@ -39,6 +43,13 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
       attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a>',
       maxZoom: 19,
     }).addTo(map)
+    map.on('zoomend', () => {
+      const zoom = map.getZoom()
+      Object.entries(markersRef.current).forEach(([id, marker]) => {
+        if (id !== selectedIdRef.current) marker.setIcon(defaultIconForZoom(zoom))
+      })
+    })
+
     mapRef.current = map
     if (externalMapRef) externalMapRef.current = map
   }, [])
@@ -47,17 +58,18 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
   useEffect(() => {
     if (!mapRef.current) return
     const map = mapRef.current
+    const zoom = map.getZoom()
+    selectedIdRef.current = selected?.id ?? null
     const existing = new Set(Object.keys(markersRef.current))
 
     playgrounds.forEach(pg => {
       existing.delete(pg.id)
+      const icon = selected?.id === pg.id ? selectedIcon : defaultIconForZoom(zoom)
       if (markersRef.current[pg.id]) {
-        markersRef.current[pg.id].setIcon(selected?.id === pg.id ? selectedIcon : defaultIcon)
+        markersRef.current[pg.id].setIcon(icon)
         return
       }
-      const marker = L.marker([pg.lat, pg.lng], {
-        icon: selected?.id === pg.id ? selectedIcon : defaultIcon,
-      })
+      const marker = L.marker([pg.lat, pg.lng], { icon })
         .addTo(map)
         .on('click', () => onSelect(pg))
       markersRef.current[pg.id] = marker
