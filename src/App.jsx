@@ -127,6 +127,7 @@ export default function App() {
             sortBy={sortBy}
             onSort={setSortBy}
             hasLocation={!!userLocation}
+            onNearMe={handleNearMe}
             onSurpriseMe={handleSurpriseMe}
           />
           <div className="results-header">
