@@ -8,8 +8,8 @@ const INFO_FIELDS = [
   ['ownership',       'Managed by'],
 ]
 
-function ParkImage({ name, lat, lng }) {
-  const { image, status } = useParkImage(name, lat, lng)
+function ParkImage({ name }) {
+  const { image, status } = useParkImage(name)
 
   if (status === 'loading') {
     return (
@@ -72,7 +72,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
 
   return (
     <div className="detail-panel">
-      <ParkImage name={playground.name} lat={playground.lat} lng={playground.lng} />
+      <ParkImage name={playground.name} />
 
       <div className="detail-header">
         <div>
