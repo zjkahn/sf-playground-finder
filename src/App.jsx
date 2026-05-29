@@ -24,7 +24,7 @@ export default function App() {
   const [selected, setSelected] = useState(null)
   const [userLocation, setUserLocation] = useState(null)
   const [geoError, setGeoError] = useState(null)
-  const [activeTab, setActiveTab] = useState('map')
+  const [mobileTab, setMobileTab] = useState('map') // 'map' | 'list'
   const mapRef = useRef(null)
 
   const neighborhoods = useMemo(() => {
@@ -69,6 +69,11 @@ export default function App() {
     )
   }
 
+  function handleSelectPark(pg) {
+    setSelected(pg)
+    setMobileTab('map')
+  }
+
   return (
     <div className="app-layout">
       <header className="app-header">
@@ -79,7 +84,7 @@ export default function App() {
 
       <div className="main-content">
         {/* Sidebar */}
-        <aside className={`sidebar ${activeTab === 'list' ? 'mobile-active' : 'mobile-hidden'}`}>
+        <aside className={`sidebar ${mobileTab === 'list' ? 'mobile-active' : 'mobile-hidden'}`}>
           <Filters
             filters={filters}
             onChange={setFilters}
@@ -89,7 +94,6 @@ export default function App() {
             sortBy={sortBy}
             onSort={setSortBy}
             hasLocation={!!userLocation}
-            onNearMe={handleNearMe}
           />
           <div className="results-header">
             {loading ? 'Loading…' : error ? `Error: ${error}` : `${filtered.length} playground${filtered.length !== 1 ? 's' : ''} found`}
@@ -102,7 +106,7 @@ export default function App() {
             <PlaygroundList
               playgrounds={filtered}
               selected={selected}
-              onSelect={pg => setSelected(pg)}
+              onSelect={handleSelectPark}
               getEntry={getEntry}
               userLocation={userLocation}
             />
@@ -110,7 +114,7 @@ export default function App() {
         </aside>
 
         {/* Map area */}
-        <div className={`map-area ${activeTab === 'map' ? 'mobile-active' : 'mobile-hidden'}`}>
+        <div className={`map-area ${mobileTab === 'map' ? 'mobile-active' : 'mobile-hidden'}`}>
           <Map
             playgrounds={filtered}
             selected={selected}
@@ -124,32 +128,39 @@ export default function App() {
           </button>
 
           {geoError && (
-            <div style={{ position: 'absolute', top: 52, right: 12, zIndex: 1001, background: 'var(--rust)', color: 'white', padding: '6px 10px', borderRadius: 8, fontSize: '.78rem' }}>
+            <div style={{ position: 'absolute', top: 52, right: 12, zIndex: 1001, background: 'var(--coral)', color: 'white', padding: '6px 10px', borderRadius: 8, fontSize: '.78rem' }}>
               {geoError}
             </div>
           )}
-        </div>
 
-        {selected && (
-          <DetailPanel
-            playground={selected}
-            entry={getEntry(selected.id)}
-            onSave={save}
-            onClose={() => setSelected(null)}
-          />
-        )}
+          {selected && (
+            <DetailPanel
+              playground={selected}
+              entry={getEntry(selected.id)}
+              onSave={save}
+              onClose={() => setSelected(null)}
+            />
+          )}
+        </div>
       </div>
 
-      <div className="mobile-tab-bar">
-        <button className={`mobile-tab ${activeTab === 'map' ? 'active' : ''}`} onClick={() => setActiveTab('map')}>
+      {/* Mobile tab bar */}
+      <nav className="mobile-tab-bar">
+        <button
+          className={`mobile-tab ${mobileTab === 'map' ? 'active' : ''}`}
+          onClick={() => setMobileTab('map')}
+        >
           <span>🗺️</span>
           <span>Map</span>
         </button>
-        <button className={`mobile-tab ${activeTab === 'list' ? 'active' : ''}`} onClick={() => setActiveTab('list')}>
-          <span>📋</span>
-          <span>List</span>
+        <button
+          className={`mobile-tab ${mobileTab === 'list' ? 'active' : ''}`}
+          onClick={() => setMobileTab('list')}
+        >
+          <span>🛝</span>
+          <span>List{filtered.length > 0 ? ` (${filtered.length})` : ''}</span>
         </button>
-      </div>
+      </nav>
     </div>
   )
 }
