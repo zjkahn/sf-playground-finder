@@ -127,16 +127,16 @@ export default function App() {
               {geoError}
             </div>
           )}
-
-          {selected && (
-            <DetailPanel
-              playground={selected}
-              entry={getEntry(selected.id)}
-              onSave={save}
-              onClose={() => setSelected(null)}
-            />
-          )}
         </div>
+
+        {selected && (
+          <DetailPanel
+            playground={selected}
+            entry={getEntry(selected.id)}
+            onSave={save}
+            onClose={() => setSelected(null)}
+          />
+        )}
       </div>
 
       <div className="mobile-tab-bar">
