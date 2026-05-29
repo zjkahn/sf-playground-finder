@@ -44,6 +44,10 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
   const mapRef = useRef(null)
   const markersRef = useRef({})
   const selectedIdRef = useRef(null)
+  const getEntryRef = useRef(getEntry)
+
+  // Keep getEntryRef current so zoomend closure always has latest data
+  useEffect(() => { getEntryRef.current = getEntry }, [getEntry])
 
   // Init map
   useEffect(() => {
@@ -57,7 +61,7 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
       const zoom = map.getZoom()
       Object.entries(markersRef.current).forEach(([id, marker]) => {
         if (id === selectedIdRef.current) return
-        const isFav = getEntry?.(id)?.favorite
+        const isFav = getEntryRef.current?.(id)?.favorite
         marker.setIcon(isFav ? favoriteIconForZoom(zoom) : defaultIconForZoom(zoom))
       })
     })
