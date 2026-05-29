@@ -1,63 +1,34 @@
-import { useState, useEffect, useRef } from 'react'
+const GOOGLE_KEY = import.meta.env.VITE_GOOGLE_MAPS_KEY
 
-const cache = {}
-
-async function fetchImage(parkName) {
-  // Step 1: search Wikipedia for the best matching article
-  const searchUrl =
-    `https://en.wikipedia.org/w/api.php?action=query&list=search` +
-    `&srsearch=${encodeURIComponent(parkName + ' San Francisco park')}` +
-    `&srnamespace=0&srlimit=3&format=json&origin=*`
-
-  const searchData = await fetch(searchUrl).then(r => r.json())
-  const hits = searchData.query?.search || []
-  if (!hits.length) return null
-
-  // Step 2: fetch the REST summary for the top result — includes thumbnail
-  for (const hit of hits) {
-    const slug = encodeURIComponent(hit.title.replace(/ /g, '_'))
-    const summary = await fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`
-    ).then(r => r.ok ? r.json() : null)
-
-    if (summary?.thumbnail?.source) {
-      // Bump resolution: replace default width with 800px
-      const src = summary.originalimage?.source || summary.thumbnail.source
-      return { src, caption: summary.title }
-    }
-  }
-  return null
+export function getStreetViewUrl(lat, lng, width = 600, height = 200) {
+  if (!GOOGLE_KEY) return null
+  return (
+    `https://maps.googleapis.com/maps/api/streetview` +
+    `?size=${width}x${height}&location=${lat},${lng}` +
+    `&fov=90&pitch=10&key=${GOOGLE_KEY}`
+  )
 }
 
-export function useParkImage(parkName) {
-  const [image, setImage] = useState(null)
-  const [status, setStatus] = useState('idle')
-  const prevName = useRef(null)
+// Street View Metadata API — check if imagery actually exists at this location
+const metaCache = {}
 
-  useEffect(() => {
-    if (!parkName || parkName === prevName.current) return
-    prevName.current = parkName
+export async function checkStreetViewExists(lat, lng) {
+  const key = `${lat},${lng}`
+  if (metaCache[key] !== undefined) return metaCache[key]
 
-    if (cache[parkName] !== undefined) {
-      setImage(cache[parkName])
-      setStatus(cache[parkName] ? 'found' : 'missing')
-      return
-    }
+  if (!GOOGLE_KEY) return false
 
-    setStatus('loading')
-    setImage(null)
+  const url =
+    `https://maps.googleapis.com/maps/api/streetview/metadata` +
+    `?location=${lat},${lng}&key=${GOOGLE_KEY}`
 
-    fetchImage(parkName)
-      .then(result => {
-        cache[parkName] = result
-        setImage(result)
-        setStatus(result ? 'found' : 'missing')
-      })
-      .catch(() => {
-        cache[parkName] = null
-        setStatus('missing')
-      })
-  }, [parkName])
-
-  return { image, status }
+  try {
+    const data = await fetch(url).then(r => r.json())
+    const exists = data.status === 'OK'
+    metaCache[key] = exists
+    return exists
+  } catch {
+    metaCache[key] = false
+    return false
+  }
 }
