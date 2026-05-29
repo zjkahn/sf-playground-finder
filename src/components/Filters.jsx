@@ -53,7 +53,6 @@ export default function Filters({ filters, onChange, neighborhoods, search, onSe
           onChange={e => handleSortChange(e.target.value)}
           style={{ flex: '0 0 auto', width: 'auto' }}
         >
-          <option value="default">Sort: Default</option>
           <option value="az">Sort: A–Z</option>
           <option value="distance">Sort: Nearest</option>
         </select>

@@ -20,7 +20,7 @@ export default function App() {
   const { getEntry, save } = useLocalData()
   const [filters, setFilters] = useState(DEFAULT_FILTERS)
   const [search, setSearch] = useState('')
-  const [sortBy, setSortBy] = useState('default')
+  const [sortBy, setSortBy] = useState('az')
   const [selected, setSelected] = useState(null)
   const [userLocation, setUserLocation] = useState(null)
   const [geoError, setGeoError] = useState(null)
