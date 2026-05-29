@@ -264,6 +264,7 @@ html, body, #root {
 .badge-blue   { background: #DBEAFE; color: #1D4ED8; }
 .badge-green  { background: var(--mint); color: var(--grass-dark); }
 .badge-yellow { background: var(--sun-light); color: #92400E; }
+.badge-favorite{ background: var(--sun-light); color: #92400E; }
 .badge-visited{ background: var(--grass); color: var(--white); }
 
 /* ── Map ── */
@@ -411,6 +412,8 @@ html, body, #root {
   transition: all .15s;
 }
 .visited-check.checked { background: var(--grass); color: var(--white); box-shadow: 0 2px 8px rgba(34,197,94,.4); }
+.favorite-check { border-color: var(--sun); color: var(--sun); }
+.favorite-check.checked { background: var(--sun-light); color: var(--sun); border-color: var(--sun); box-shadow: 0 2px 8px rgba(251,191,36,.4); }
 
 /* ── Loading / Error ── */
 .status-msg {

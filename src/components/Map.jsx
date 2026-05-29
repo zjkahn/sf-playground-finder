@@ -27,9 +27,19 @@ function defaultIconForZoom(zoom) {
   })
 }
 
+function favoriteIconForZoom(zoom) {
+  const s = zoom >= 15 ? 24 : zoom >= 14 ? 20 : 18
+  return L.divIcon({
+    className: '',
+    html: `<div style="font-size:${s}px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))">⭐</div>`,
+    iconSize: [s, s],
+    iconAnchor: [s / 2, s / 2],
+  })
+}
+
 const SF_CENTER = [37.7749, -122.4194]
 
-export default function Map({ playgrounds, selected, onSelect, userLocation, mapRef: externalMapRef }) {
+export default function Map({ playgrounds, selected, onSelect, userLocation, mapRef: externalMapRef, getEntry }) {
   const containerRef = useRef(null)
   const mapRef = useRef(null)
   const markersRef = useRef({})
@@ -46,7 +56,9 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
     map.on('zoomend', () => {
       const zoom = map.getZoom()
       Object.entries(markersRef.current).forEach(([id, marker]) => {
-        if (id !== selectedIdRef.current) marker.setIcon(defaultIconForZoom(zoom))
+        if (id === selectedIdRef.current) return
+        const isFav = getEntry?.(id)?.favorite
+        marker.setIcon(isFav ? favoriteIconForZoom(zoom) : defaultIconForZoom(zoom))
       })
     })
 
@@ -64,7 +76,8 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
 
     playgrounds.forEach(pg => {
       existing.delete(pg.id)
-      const icon = selected?.id === pg.id ? selectedIcon : defaultIconForZoom(zoom)
+      const isFav = getEntry?.(pg.id)?.favorite
+      const icon = selected?.id === pg.id ? selectedIcon : isFav ? favoriteIconForZoom(zoom) : defaultIconForZoom(zoom)
       if (markersRef.current[pg.id]) {
         markersRef.current[pg.id].setIcon(icon)
         return

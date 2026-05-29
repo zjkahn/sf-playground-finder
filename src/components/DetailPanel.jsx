@@ -23,6 +23,10 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
     onSave(playground.id, { visited: !entry.visited })
   }
 
+  function toggleFavorite() {
+    onSave(playground.id, { favorite: !entry.favorite })
+  }
+
   async function handleShare() {
     const url = window.location.href
     const shareData = {
@@ -96,10 +100,16 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             {copied ? '✓ Copied!' : '🔗 Share'}
           </button>
 
-          <label className="visited-toggle" onClick={toggleVisited}>
-            <div className={`visited-check ${entry.visited ? 'checked' : ''}`}>{entry.visited ? '✓' : ''}</div>
-            Mark as Visited
-          </label>
+          <div style={{ display: 'flex', gap: 14 }}>
+            <label className="visited-toggle" onClick={toggleFavorite}>
+              <div className={`visited-check favorite-check ${entry.favorite ? 'checked' : ''}`}>{entry.favorite ? '⭐' : '☆'}</div>
+              Favorite
+            </label>
+            <label className="visited-toggle" onClick={toggleVisited}>
+              <div className={`visited-check ${entry.visited ? 'checked' : ''}`}>{entry.visited ? '✓' : ''}</div>
+              Visited
+            </label>
+          </div>
         </div>
 
         {/* Right: Street View photo */}

@@ -11,6 +11,7 @@ const DEFAULT_FILTERS = {
   hasRestrooms: false,
   hasParking: false,
   hasPicnicTables: false,
+  favoritesOnly: false,
   visitedOnly: false,
   neighborhood: '',
 }
@@ -63,6 +64,7 @@ export default function App() {
       if (filters.hasRestrooms    && !pg.hasRestrooms)    return false
       if (filters.hasParking      && !pg.hasParking)      return false
       if (filters.hasPicnicTables && !pg.hasPicnicTables) return false
+      if (filters.favoritesOnly && !getEntry(pg.id).favorite) return false
       if (filters.visitedOnly && !getEntry(pg.id).visited) return false
       if (filters.neighborhood && pg.neighborhood !== filters.neighborhood) return false
       if (search) {
@@ -156,6 +158,7 @@ export default function App() {
             onSelect={pg => setSelected(pg)}
             userLocation={userLocation}
             mapRef={mapRef}
+            getEntry={getEntry}
           />
 
           <button className="near-me-btn" onClick={handleNearMe} title="Center on my location">

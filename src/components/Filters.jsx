@@ -5,6 +5,7 @@ const CHIPS = [
   { key: 'hasRestrooms',    label: '🚻 Restrooms' },
   { key: 'hasParking',      label: '🅿️ Parking' },
   { key: 'hasPicnicTables', label: '🪑 Picnic Area' },
+  { key: 'favoritesOnly',   label: '⭐ Favorites' },
   { key: 'visitedOnly',     label: '✓ Visited' },
 ]
 

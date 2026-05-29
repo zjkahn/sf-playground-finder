@@ -1,8 +1,9 @@
 import React from 'react'
 
-function Badges({ pg, visited }) {
+function Badges({ pg, visited, favorite }) {
   return (
     <div className="card-badges">
+      {favorite           && <span className="badge badge-favorite">⭐ Favorite</span>}
       {visited            && <span className="badge badge-visited">✓ Visited</span>}
       {pg.hasRestrooms    && <span className="badge badge-green">🚻 Restrooms</span>}
       {pg.hasParking      && <span className="badge badge-yellow">🅿️ Parking</span>}
@@ -39,7 +40,7 @@ export default function PlaygroundList({ playgrounds, selected, onSelect, getEnt
               {distLabel && <span style={{ fontSize: '.72rem', fontWeight: 700, color: 'var(--sky)', flexShrink: 0, marginLeft: 6 }}>{distLabel}</span>}
             </div>
             <div className="card-address">{pg.address}{pg.neighborhood ? ` · ${pg.neighborhood}` : ''}</div>
-            <Badges pg={pg} visited={entry.visited} />
+            <Badges pg={pg} visited={entry.visited} favorite={entry.favorite} />
           </div>
         )
       })}
