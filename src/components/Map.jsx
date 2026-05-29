@@ -101,7 +101,13 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
       }),
       title: 'Your location',
     }).addTo(mapRef.current)
-    mapRef.current.flyTo(userLocation, 13, { animate: true, duration: 1 })
+    const [lat, lng] = userLocation
+    const dlat = 2 / 69
+    const dlng = 2 / 53
+    mapRef.current.fitBounds(
+      [[lat - dlat, lng - dlng], [lat + dlat, lng + dlng]],
+      { animate: true }
+    )
   }, [userLocation])
 
   return (
