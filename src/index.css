@@ -177,6 +177,18 @@ html, body, #root {
 .btn-sm { padding: 4px 10px; font-size: .75rem; }
 .btn-ghost { background: var(--white); border: 2px solid var(--border); color: var(--text-muted); }
 .btn-ghost:hover { border-color: var(--sky); color: var(--sky); }
+.btn-surprise {
+  background: linear-gradient(135deg, var(--coral) 0%, var(--sun) 100%);
+  color: var(--white);
+  border: none;
+  box-shadow: 0 2px 10px rgba(249,115,22,.35);
+  font-size: .85rem;
+  letter-spacing: .2px;
+}
+.btn-surprise:hover {
+  box-shadow: 0 4px 16px rgba(249,115,22,.5);
+  filter: brightness(1.05);
+}
 
 .results-header {
   padding: 8px 16px;

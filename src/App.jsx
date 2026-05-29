@@ -60,6 +60,27 @@ export default function App() {
     return list
   }, [playgrounds, filters, search, sortBy, userLocation, getEntry])
 
+  function handleSurpriseMe() {
+    const unvisited = filtered.filter(pg => !getEntry(pg.id).visited)
+    const pool = unvisited.length > 0 ? unvisited : filtered
+    if (pool.length === 0) return
+
+    let candidates = pool
+    if (userLocation) {
+      const [lat, lng] = userLocation
+      const nearby = pool.filter(pg => {
+        const dlat = (pg.lat - lat) * 69
+        const dlng = (pg.lng - lng) * 53
+        return Math.sqrt(dlat * dlat + dlng * dlng) <= 2
+      })
+      if (nearby.length > 0) candidates = nearby
+    }
+
+    const pick = candidates[Math.floor(Math.random() * candidates.length)]
+    setSelected(pick)
+    setMobileTab('map')
+  }
+
   function handleNearMe() {
     setGeoError(null)
     if (!navigator.geolocation) { setGeoError('Geolocation not supported'); return }
@@ -89,6 +110,7 @@ export default function App() {
             sortBy={sortBy}
             onSort={setSortBy}
             hasLocation={!!userLocation}
+            onSurpriseMe={handleSurpriseMe}
           />
           <div className="results-header">
             {loading ? 'Loading…' : error ? `Error: ${error}` : `${filtered.length} playground${filtered.length !== 1 ? 's' : ''} found`}

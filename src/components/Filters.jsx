@@ -8,7 +8,7 @@ const CHIPS = [
   { key: 'visitedOnly',     label: '✓ Visited' },
 ]
 
-export default function Filters({ filters, onChange, neighborhoods, search, onSearch, sortBy, onSort, hasLocation, onNearMe }) {
+export default function Filters({ filters, onChange, neighborhoods, search, onSearch, sortBy, onSort, hasLocation, onNearMe, onSurpriseMe }) {
   function toggle(key) {
     onChange({ ...filters, [key]: !filters[key] })
   }
@@ -62,6 +62,11 @@ export default function Filters({ filters, onChange, neighborhoods, search, onSe
           onClick={() => onChange({ toddlerFriendly: false, hasRestrooms: false, hasParking: false, hasPicnicTables: false, visitedOnly: false, neighborhood: '' })}
         >
           Clear
+        </button>
+      </div>
+      <div className="filter-row">
+        <button className="btn btn-surprise" onClick={onSurpriseMe} style={{ width: '100%' }}>
+          🎲 Surprise Me!
         </button>
       </div>
     </div>
