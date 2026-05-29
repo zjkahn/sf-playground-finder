@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getStreetViewUrl } from '../hooks/useParkImage'
 
-const INFO_FIELDS = [
-  ['propertytype', 'Type'],
-  ['acres',        'Acres'],
-  ['complex',      'Complex'],
-  ['ownership',    'Managed by'],
-]
 
 export default function DetailPanel({ playground, entry, onSave, onClose }) {
   const [notes, setNotes] = useState(entry.notes || '')
@@ -25,9 +19,8 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
     onSave(playground.id, { visited: !entry.visited })
   }
 
-  const raw = playground.rawAmenities || {}
-  const infoRows = INFO_FIELDS.map(([k, label]) => raw[k] ? { label, value: raw[k] } : null).filter(Boolean)
   const photoSrc = getStreetViewUrl(playground.lat, playground.lng, 600, 400)
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(playground.name + ' ' + playground.address)}`
   const showPhoto = photoSrc && !photoFailed
 
   return (
@@ -56,13 +49,18 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             </div>
           )}
 
-          {infoRows.length > 0 && (
-            <div style={{ fontSize: '.78rem', lineHeight: 1.7, color: 'var(--text)' }}>
-              {infoRows.map(({ label, value }) => (
-                <div key={label}><span style={{ color: 'var(--text-muted)', marginRight: 5 }}>{label}:</span>{value}</div>
-              ))}
-            </div>
-          )}
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 5,
+              fontSize: '.78rem', fontWeight: 700, color: 'var(--sky)',
+              textDecoration: 'none',
+            }}
+          >
+            🗺️ Open in Google Maps
+          </a>
 
           <label className="visited-toggle" onClick={toggleVisited} style={{ marginTop: 'auto' }}>
             <div className={`visited-check ${entry.visited ? 'checked' : ''}`}>{entry.visited ? '✓' : ''}</div>
