@@ -23,8 +23,16 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
   }
 
   const photoSrc = getStreetViewUrl(playground.lat, playground.lng, 600, 400)
+  const largeSrc = getStreetViewUrl(playground.lat, playground.lng, 1200, 800)
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(playground.name + ' ' + playground.address)}`
   const showPhoto = photoSrc && !photoFailed
+
+  // Preload large image in background so lightbox opens instantly
+  useEffect(() => {
+    if (!largeSrc) return
+    const img = new Image()
+    img.src = largeSrc
+  }, [largeSrc])
 
   return (
     <div className="detail-panel">
@@ -107,7 +115,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             }}
           >
             <img
-              src={getStreetViewUrl(playground.lat, playground.lng, 1200, 800)}
+              src={largeSrc}
               alt={playground.name}
               style={{ maxWidth: '92vw', maxHeight: '88vh', borderRadius: 12, boxShadow: '0 8px 40px rgba(0,0,0,.6)' }}
               onClick={e => e.stopPropagation()}
