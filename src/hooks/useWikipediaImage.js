@@ -2,9 +2,19 @@ import { useState, useEffect, useRef } from 'react'
 
 const cache = {}
 
+async function fetchWikiImage(title) {
+  const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=pageimages&format=json&pithumbsize=600&origin=*`
+  const data = await fetch(url).then(r => r.json())
+  const page = Object.values(data.query?.pages || {})[0]
+  if (page && !page.missing && page.thumbnail?.source) {
+    return { src: page.thumbnail.source, caption: page.title }
+  }
+  return null
+}
+
 export function useWikipediaImage(parkName) {
-  const [image, setImage] = useState(null) // { src, caption }
-  const [status, setStatus] = useState('idle') // idle | loading | found | missing
+  const [image, setImage] = useState(null)
+  const [status, setStatus] = useState('idle')
   const prevName = useRef(null)
 
   useEffect(() => {
@@ -20,41 +30,21 @@ export function useWikipediaImage(parkName) {
     setStatus('loading')
     setImage(null)
 
-    // Strip generic suffixes to improve Wikipedia match rate
-    const query = parkName
-      .replace(/\s+(park|playground|mini park|rec center|recreation center)$/i, '')
-      .trim()
+    // Try three query formats in order of specificity
+    const attempts = [
+      `${parkName}, San Francisco`,
+      `${parkName}`,
+      `${parkName}, San Francisco, California`,
+    ]
 
-    const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(query + ' San Francisco')}&prop=pageimages|pageterms&format=json&pithumbsize=600&origin=*`
-
-    fetch(url)
-      .then(r => r.json())
-      .then(data => {
-        const pages = Object.values(data.query?.pages || {})
-        const page = pages[0]
-        if (page && page.thumbnail?.source) {
-          const result = { src: page.thumbnail.source, caption: page.title }
-          cache[parkName] = result
-          setImage(result)
-          setStatus('found')
-        } else {
-          // Try without "San Francisco" suffix
-          return fetch(`https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(query)}&prop=pageimages&format=json&pithumbsize=600&origin=*`)
-            .then(r => r.json())
-            .then(data2 => {
-              const pages2 = Object.values(data2.query?.pages || {})
-              const page2 = pages2[0]
-              if (page2 && page2.thumbnail?.source) {
-                const result = { src: page2.thumbnail.source, caption: page2.title }
-                cache[parkName] = result
-                setImage(result)
-                setStatus('found')
-              } else {
-                cache[parkName] = null
-                setStatus('missing')
-              }
-            })
-        }
+    attempts.reduce(
+      (chain, query) => chain.then(result => result || fetchWikiImage(query)),
+      Promise.resolve(null)
+    )
+      .then(result => {
+        cache[parkName] = result
+        setImage(result)
+        setStatus(result ? 'found' : 'missing')
       })
       .catch(() => {
         cache[parkName] = null
