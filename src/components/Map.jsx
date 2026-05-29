@@ -18,7 +18,7 @@ const selectedIcon = L.divIcon({
 })
 
 function defaultIconForZoom(zoom) {
-  const s = zoom >= 16 ? 18 : zoom >= 15 ? 14 : zoom >= 14 ? 11 : 8
+  const s = zoom >= 16 ? 24 : zoom >= 15 ? 20 : zoom >= 14 ? 17 : 14
   return L.divIcon({
     className: '',
     html: `<div style="width:${s}px;height:${s}px;background:#3a8c6e;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>`,
