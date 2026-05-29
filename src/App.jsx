@@ -167,15 +167,16 @@ export default function App() {
             </div>
           )}
 
-          {selected && (
-            <DetailPanel
-              playground={selected}
-              entry={getEntry(selected.id)}
-              onSave={save}
-              onClose={() => setSelected(null)}
-            />
-          )}
         </div>
+
+        {selected && (
+          <DetailPanel
+            playground={selected}
+            entry={getEntry(selected.id)}
+            onSave={save}
+            onClose={() => setSelected(null)}
+          />
+        )}
       </div>
 
       {/* Mobile tab bar */}
