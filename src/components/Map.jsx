@@ -101,7 +101,7 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
       }),
       title: 'Your location',
     }).addTo(mapRef.current)
-    mapRef.current.flyTo(userLocation, 13, { animate: true, duration: 1 })
+    mapRef.current.flyTo(userLocation, 12, { animate: true, duration: 1 })
   }, [userLocation])
 
   return (
