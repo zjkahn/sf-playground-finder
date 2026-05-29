@@ -12,9 +12,9 @@ L.Icon.Default.mergeOptions({
 
 const selectedIcon = L.divIcon({
   className: '',
-  html: '<div style="width:22px;height:22px;background:#2a7fa5;border:3px solid white;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.4)"></div>',
-  iconSize: [22, 22],
-  iconAnchor: [11, 11],
+  html: '<div style="font-size:26px;line-height:1;filter:drop-shadow(0 2px 4px rgba(0,0,0,.4));transform:scale(1.1)">🛝</div>',
+  iconSize: [30, 30],
+  iconAnchor: [15, 15],
 })
 
 const defaultIcon = L.divIcon({

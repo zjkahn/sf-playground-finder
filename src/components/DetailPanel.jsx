@@ -62,7 +62,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             🗺️ Open in Google Maps
           </a>
 
-          <label className="visited-toggle" onClick={toggleVisited} style={{ marginTop: 'auto' }}>
+          <label className="visited-toggle" onClick={toggleVisited}>
             <div className={`visited-check ${entry.visited ? 'checked' : ''}`}>{entry.visited ? '✓' : ''}</div>
             Mark as Visited
           </label>
@@ -70,7 +70,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
 
         {/* Right: Street View photo */}
         {showPhoto && (
-          <div style={{ width: '38%', flexShrink: 0, position: 'relative', minHeight: 140 }}>
+          <div style={{ width: '38%', flexShrink: 0, position: 'relative' }}>
             <img
               src={photoSrc}
               alt={playground.name}
