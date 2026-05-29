@@ -193,7 +193,7 @@ export default function App() {
           onClick={() => setMobileTab('list')}
         >
           <span>🛝</span>
-          <span>List{filtered.length > 0 ? ` (${filtered.length})` : ''}</span>
+          <span>List</span>
         </button>
       </nav>
     </div>
