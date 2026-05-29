@@ -101,7 +101,8 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
       }),
       title: 'Your location',
     }).addTo(mapRef.current)
-    mapRef.current.flyTo(userLocation, 14, { animate: true, duration: 1 })
+    const zoom = window.innerWidth <= 700 ? 14 : 14.5
+    mapRef.current.flyTo(userLocation, zoom, { animate: true, duration: 1 })
   }, [userLocation])
 
   return (
