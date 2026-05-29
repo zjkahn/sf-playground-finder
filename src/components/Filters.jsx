@@ -8,7 +8,7 @@ const CHIPS = [
   { key: 'visitedOnly',     label: '✓ Visited' },
 ]
 
-export default function Filters({ filters, onChange, neighborhoods, search, onSearch }) {
+export default function Filters({ filters, onChange, neighborhoods, search, onSearch, sortBy, onSort, hasLocation }) {
   function toggle(key) {
     onChange({ ...filters, [key]: !filters[key] })
   }
@@ -41,6 +41,18 @@ export default function Filters({ filters, onChange, neighborhoods, search, onSe
           {neighborhoods.map(n => (
             <option key={n} value={n}>{n}</option>
           ))}
+        </select>
+        <select
+          className="filter-select"
+          value={sortBy}
+          onChange={e => onSort(e.target.value)}
+          style={{ flex: '0 0 auto', width: 'auto' }}
+        >
+          <option value="default">Sort: Default</option>
+          <option value="az">Sort: A–Z</option>
+          <option value="distance" disabled={!hasLocation}>
+            {hasLocation ? 'Sort: Nearest' : 'Sort: Nearest (tap 📍)'}
+          </option>
         </select>
         <button
           className="btn btn-ghost btn-sm"

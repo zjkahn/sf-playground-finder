@@ -20,6 +20,7 @@ export default function App() {
   const { getEntry, save } = useLocalData()
   const [filters, setFilters] = useState(DEFAULT_FILTERS)
   const [search, setSearch] = useState('')
+  const [sortBy, setSortBy] = useState('default')
   const [selected, setSelected] = useState(null)
   const [userLocation, setUserLocation] = useState(null)
   const [geoError, setGeoError] = useState(null)
@@ -30,8 +31,16 @@ export default function App() {
     return [...set].sort()
   }, [playgrounds])
 
+  function distanceMiles(pg) {
+    if (!userLocation) return 0
+    const [lat, lng] = userLocation
+    const dlat = (pg.lat - lat) * 69
+    const dlng = (pg.lng - lng) * 53
+    return Math.sqrt(dlat * dlat + dlng * dlng)
+  }
+
   const filtered = useMemo(() => {
-    return playgrounds.filter(pg => {
+    const list = playgrounds.filter(pg => {
       if (filters.toddlerFriendly && !pg.toddlerFriendly) return false
       if (filters.hasRestrooms    && !pg.hasRestrooms)    return false
       if (filters.hasParking      && !pg.hasParking)      return false
@@ -44,13 +53,17 @@ export default function App() {
       }
       return true
     })
-  }, [playgrounds, filters, search, getEntry])
+
+    if (sortBy === 'az')       return [...list].sort((a, b) => a.name.localeCompare(b.name))
+    if (sortBy === 'distance') return [...list].sort((a, b) => distanceMiles(a) - distanceMiles(b))
+    return list
+  }, [playgrounds, filters, search, sortBy, userLocation, getEntry])
 
   function handleNearMe() {
     setGeoError(null)
     if (!navigator.geolocation) { setGeoError('Geolocation not supported'); return }
     navigator.geolocation.getCurrentPosition(
-      pos => setUserLocation([pos.coords.latitude, pos.coords.longitude]),
+      pos => { setUserLocation([pos.coords.latitude, pos.coords.longitude]); setSortBy('distance') },
       () => setGeoError('Location access denied')
     )
   }
@@ -72,6 +85,9 @@ export default function App() {
             neighborhoods={neighborhoods}
             search={search}
             onSearch={setSearch}
+            sortBy={sortBy}
+            onSort={setSortBy}
+            hasLocation={!!userLocation}
           />
           <div className="results-header">
             {loading ? 'Loading…' : error ? `Error: ${error}` : `${filtered.length} playground${filtered.length !== 1 ? 's' : ''} found`}
@@ -86,6 +102,7 @@ export default function App() {
               selected={selected}
               onSelect={pg => setSelected(pg)}
               getEntry={getEntry}
+              userLocation={userLocation}
             />
           )}
         </aside>

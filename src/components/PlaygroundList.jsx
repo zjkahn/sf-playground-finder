@@ -11,7 +11,7 @@ function Badges({ pg, visited }) {
   )
 }
 
-export default function PlaygroundList({ playgrounds, selected, onSelect, getEntry }) {
+export default function PlaygroundList({ playgrounds, selected, onSelect, getEntry, userLocation }) {
   if (playgrounds.length === 0) {
     return <div className="status-msg"><span>No playgrounds match your filters.</span></div>
   }
@@ -20,13 +20,24 @@ export default function PlaygroundList({ playgrounds, selected, onSelect, getEnt
     <div className="playground-list">
       {playgrounds.map(pg => {
         const entry = getEntry(pg.id)
+        let distLabel = null
+        if (userLocation) {
+          const [lat, lng] = userLocation
+          const dlat = (pg.lat - lat) * 69
+          const dlng = (pg.lng - lng) * 53
+          const miles = Math.sqrt(dlat * dlat + dlng * dlng)
+          distLabel = miles < 0.1 ? 'nearby' : `${miles.toFixed(1)} mi`
+        }
         return (
           <div
             key={pg.id}
             className={`playground-card ${selected?.id === pg.id ? 'selected' : ''}`}
             onClick={() => onSelect(pg)}
           >
-            <div className="card-title">{pg.name}</div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+              <div className="card-title">{pg.name}</div>
+              {distLabel && <span style={{ fontSize: '.72rem', fontWeight: 700, color: 'var(--sky)', flexShrink: 0, marginLeft: 6 }}>{distLabel}</span>}
+            </div>
             <div className="card-address">{pg.address}{pg.neighborhood ? ` · ${pg.neighborhood}` : ''}</div>
             <Badges pg={pg} visited={entry.visited} />
           </div>
