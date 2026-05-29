@@ -61,6 +61,7 @@ export function usePlaygrounds() {
           .map(raw => parsePG(raw, amenityMap))
           .filter(p => p.lat !== null && p.lng !== null)
           .filter(p => PARK_TYPES.has(p.propertyType.toLowerCase()))
+          .filter(p => p.toddlerFriendly)
         setPlaygrounds(parsed)
         setLoading(false)
       })
