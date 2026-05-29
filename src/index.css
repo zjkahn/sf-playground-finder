@@ -39,14 +39,14 @@ html, body, #root {
 }
 
 .app-header {
-  background: linear-gradient(135deg, var(--sky-dark) 0%, var(--sky) 60%, #38BDF8 100%);
+  background: linear-gradient(135deg, var(--grass-dark) 0%, var(--grass) 60%, #4ADE80 100%);
   color: var(--white);
   padding: 12px 20px;
   display: flex;
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(14,165,233,.35);
+  box-shadow: 0 4px 12px rgba(22,163,74,.35);
 }
 
 .app-header h1 {
