@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useWikipediaImage } from '../hooks/useWikipediaImage'
+import { useParkImage } from '../hooks/useParkImage'
 
 const INFO_FIELDS = [
   ['propertytype',    'Type'],
@@ -8,8 +8,8 @@ const INFO_FIELDS = [
   ['ownership',       'Managed by'],
 ]
 
-function ParkImage({ name }) {
-  const { image, status } = useWikipediaImage(name)
+function ParkImage({ name, lat, lng }) {
+  const { image, status } = useParkImage(name, lat, lng)
 
   if (status === 'loading') {
     return (
@@ -33,7 +33,7 @@ function ParkImage({ name }) {
           padding: '20px 10px 6px',
           fontSize: '.68rem', color: 'rgba(255,255,255,.8)',
         }}>
-          📷 Wikipedia
+          📷 {image.caption}
         </div>
       </div>
     )
@@ -72,7 +72,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
 
   return (
     <div className="detail-panel">
-      <ParkImage name={playground.name} />
+      <ParkImage name={playground.name} lat={playground.lat} lng={playground.lng} />
 
       <div className="detail-header">
         <div>
