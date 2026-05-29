@@ -8,9 +8,14 @@ const CHIPS = [
   { key: 'visitedOnly',     label: '✓ Visited' },
 ]
 
-export default function Filters({ filters, onChange, neighborhoods, search, onSearch, sortBy, onSort, hasLocation }) {
+export default function Filters({ filters, onChange, neighborhoods, search, onSearch, sortBy, onSort, hasLocation, onNearMe }) {
   function toggle(key) {
     onChange({ ...filters, [key]: !filters[key] })
+  }
+
+  function handleSortChange(value) {
+    if (value === 'distance' && !hasLocation) onNearMe()
+    onSort(value)
   }
 
   return (
@@ -45,14 +50,12 @@ export default function Filters({ filters, onChange, neighborhoods, search, onSe
         <select
           className="filter-select"
           value={sortBy}
-          onChange={e => onSort(e.target.value)}
+          onChange={e => handleSortChange(e.target.value)}
           style={{ flex: '0 0 auto', width: 'auto' }}
         >
           <option value="default">Sort: Default</option>
           <option value="az">Sort: A–Z</option>
-          <option value="distance" disabled={!hasLocation}>
-            {hasLocation ? 'Sort: Nearest' : 'Sort: Nearest (tap 📍)'}
-          </option>
+          <option value="distance">Sort: Nearest</option>
         </select>
         <button
           className="btn btn-ghost btn-sm"

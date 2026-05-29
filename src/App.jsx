@@ -89,6 +89,7 @@ export default function App() {
             sortBy={sortBy}
             onSort={setSortBy}
             hasLocation={!!userLocation}
+            onNearMe={handleNearMe}
           />
           <div className="results-header">
             {loading ? 'Loading…' : error ? `Error: ${error}` : `${filtered.length} playground${filtered.length !== 1 ? 's' : ''} found`}
