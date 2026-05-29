@@ -420,12 +420,78 @@ html, body, #root {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ── Map area wrapper ── */
+.map-area {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Mobile tab bar (hidden on desktop) ── */
+.mobile-tab-bar { display: none; }
+
 /* ── Mobile ── */
 @media (max-width: 700px) {
-  .main-content { flex-direction: column; }
-  .sidebar { width: 100%; min-width: unset; height: 45vh; border-right: none; border-bottom: 2px solid var(--border); }
-  .map-container { height: 55vh; }
+  .app-layout { padding-bottom: 56px; } /* room for tab bar */
+
+  .main-content { position: relative; flex: 1; overflow: hidden; }
+
+  /* Each panel fills the full content area; show/hide via classes */
+  .sidebar,
+  .map-area {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-right: none;
+    border-bottom: none;
+    min-width: unset;
+    transition: opacity .15s, visibility .15s;
+  }
+
+  .mobile-active  { opacity: 1; visibility: visible; z-index: 1; }
+  .mobile-hidden  { opacity: 0; visibility: hidden;  z-index: 0; pointer-events: none; }
+
   .app-header .subtitle { display: none; }
   .detail-panel { max-height: 65%; overflow-y: auto; width: 100%; left: 0; transform: none; min-width: unset; }
   .playground-list { padding: 8px; gap: 6px; }
+
+  /* Tab bar */
+  .mobile-tab-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 56px;
+    background: var(--white);
+    border-top: 2px solid var(--border);
+    z-index: 2000;
+    box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+  }
+
+  .mobile-tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    border: none;
+    background: transparent;
+    font-family: 'Nunito', sans-serif;
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color .15s;
+  }
+
+  .mobile-tab span:first-child { font-size: 1.3rem; line-height: 1; }
+
+  .mobile-tab.active {
+    color: var(--sky);
+  }
+
+  .mobile-tab.active span:first-child {
+    filter: drop-shadow(0 1px 3px rgba(14,165,233,.4));
+  }
 }
