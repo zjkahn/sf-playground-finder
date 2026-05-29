@@ -1,52 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { getStreetViewUrl } from '../hooks/useParkImage'
-
 const INFO_FIELDS = [
   ['propertytype', 'Type'],
   ['acres',        'Acres'],
   ['complex',      'Complex'],
   ['ownership',    'Managed by'],
 ]
-
-function ParkImage({ name, lat, lng }) {
-  const src = getStreetViewUrl(lat, lng)
-  const [failed, setFailed] = useState(false)
-
-  useEffect(() => { setFailed(false) }, [lat, lng])
-
-  if (!src || failed) {
-    return (
-      <div style={{
-        height: 120,
-        background: 'linear-gradient(135deg, var(--mist) 0%, var(--fog) 100%)',
-        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-        gap: 6, color: 'var(--text-muted)',
-      }}>
-        <span style={{ fontSize: '2.5rem' }}>🛝</span>
-        <span style={{ fontSize: '.72rem' }}>No photo available</span>
-      </div>
-    )
-  }
-
-  return (
-    <div style={{ position: 'relative' }}>
-      <img
-        src={src}
-        alt={name}
-        style={{ width: '100%', height: 180, objectFit: 'cover', display: 'block' }}
-        onError={() => setFailed(true)}
-      />
-      <div style={{
-        position: 'absolute', bottom: 0, left: 0, right: 0,
-        background: 'linear-gradient(transparent, rgba(0,0,0,.5))',
-        padding: '20px 10px 6px',
-        fontSize: '.68rem', color: 'rgba(255,255,255,.8)',
-      }}>
-        📷 Google Street View
-      </div>
-    </div>
-  )
-}
 
 export default function DetailPanel({ playground, entry, onSave, onClose }) {
   const [notes, setNotes] = useState(entry.notes || '')
@@ -68,8 +26,6 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
 
   return (
     <div className="detail-panel">
-      <ParkImage name={playground.name} lat={playground.lat} lng={playground.lng} />
-
       <div className="detail-header">
         <div>
           <div className="detail-title">{playground.name}</div>
