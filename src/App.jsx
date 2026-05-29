@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
 import Map from './components/Map'
 import Filters from './components/Filters'
 import PlaygroundList from './components/PlaygroundList'
@@ -26,6 +26,23 @@ export default function App() {
   const [geoError, setGeoError] = useState(null)
   const [mobileTab, setMobileTab] = useState('map') // 'map' | 'list'
   const mapRef = useRef(null)
+  const initialParkId = useRef(new URLSearchParams(window.location.search).get('park'))
+
+  // Auto-select park from URL on first load
+  useEffect(() => {
+    if (!initialParkId.current || playgrounds.length === 0) return
+    const pg = playgrounds.find(p => String(p.id) === initialParkId.current)
+    if (pg) { setSelected(pg); setMobileTab('map') }
+    initialParkId.current = null
+  }, [playgrounds])
+
+  // Keep URL in sync with selected park
+  useEffect(() => {
+    const url = new URL(window.location)
+    if (selected) url.searchParams.set('park', selected.id)
+    else url.searchParams.delete('park')
+    window.history.replaceState({}, '', url)
+  }, [selected])
 
   const neighborhoods = useMemo(() => {
     const set = new Set(playgrounds.map(p => p.neighborhood).filter(Boolean))

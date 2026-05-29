@@ -7,6 +7,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
   const [notes, setNotes] = useState(entry.notes || '')
   const [photoFailed, setPhotoFailed] = useState(false)
   const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [copied, setCopied] = useState(false)
 
   useEffect(() => {
     setNotes(entry.notes || '')
@@ -20,6 +21,22 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
 
   function toggleVisited() {
     onSave(playground.id, { visited: !entry.visited })
+  }
+
+  async function handleShare() {
+    const url = window.location.href
+    const shareData = {
+      title: playground.name,
+      text: `Check out ${playground.name} — ${playground.address}`,
+      url,
+    }
+    if (navigator.share && navigator.canShare?.(shareData)) {
+      try { await navigator.share(shareData); return } catch {}
+    }
+    // Fallback: copy to clipboard
+    await navigator.clipboard.writeText(url)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
   }
 
   const photoSrc = getStreetViewUrl(playground.lat, playground.lng, 600, 400)
@@ -48,7 +65,12 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
                 {playground.address}{playground.neighborhood ? ` · ${playground.neighborhood}` : ''}
               </div>
             </div>
-            <button className="btn btn-ghost btn-sm" onClick={onClose} style={{ flexShrink: 0 }}>✕</button>
+            <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
+              <button className="btn btn-ghost btn-sm" onClick={handleShare} style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                {copied ? '✓ Copied!' : '🔗 Share'}
+              </button>
+              <button className="btn btn-ghost btn-sm" onClick={onClose}>✕</button>
+            </div>
           </div>
 
           {(playground.toddlerFriendly || playground.hasRestrooms || playground.hasParking || playground.hasPicnicTables) && (
