@@ -70,7 +70,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
 
         {/* Right: Street View photo */}
         {showPhoto && (
-          <div style={{ width: '38%', flexShrink: 0, position: 'relative' }}>
+          <div style={{ width: '45%', flexShrink: 0, position: 'relative' }}>
             <img
               src={photoSrc}
               alt={playground.name}
