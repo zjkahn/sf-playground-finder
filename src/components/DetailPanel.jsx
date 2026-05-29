@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { getStreetViewUrl } from '../hooks/useParkImage'
 
 
@@ -94,8 +95,8 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
           </div>
         )}
 
-        {/* Lightbox */}
-        {lightboxOpen && (
+        {/* Lightbox — rendered via portal to escape transform containing block */}
+        {lightboxOpen && createPortal(
           <div
             onClick={() => setLightboxOpen(false)}
             style={{
@@ -120,7 +121,8 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
                 cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
               }}
             >✕</button>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
 
