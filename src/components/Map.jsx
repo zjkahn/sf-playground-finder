@@ -104,10 +104,12 @@ export default function Map({ playgrounds, selected, onSelect, userLocation, map
     const [lat, lng] = userLocation
     const dlat = 2 / 69
     const dlng = 2 / 53
-    mapRef.current.fitBounds(
-      [[lat - dlat, lng - dlng], [lat + dlat, lng + dlng]],
-      { animate: true }
+    const bounds = L.latLngBounds(
+      [lat - dlat, lng - dlng],
+      [lat + dlat, lng + dlng]
     )
+    const zoom = mapRef.current.getBoundsZoom(bounds)
+    mapRef.current.flyTo(userLocation, zoom, { animate: true, duration: 1 })
   }, [userLocation])
 
   return (
