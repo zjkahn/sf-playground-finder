@@ -60,7 +60,15 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
         <div style={{ flex: 1, padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0 }}>
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 }}>
             <div style={{ minWidth: 0 }}>
-              <div className="detail-title">{playground.name}</div>
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="detail-title"
+                style={{ textDecoration: 'none', display: 'block' }}
+              >
+                {playground.name} <span style={{ fontSize: '.7em', opacity: .6 }}>↗</span>
+              </a>
               <div className="detail-address">
                 {playground.address}{playground.neighborhood ? ` · ${playground.neighborhood}` : ''}
               </div>
@@ -77,30 +85,16 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             </div>
           )}
 
-          <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
-            <a
-              href={mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 5,
-                fontSize: '.78rem', fontWeight: 700, color: 'var(--sky)',
-                textDecoration: 'none',
-              }}
-            >
-              🗺️ Google Maps
-            </a>
-            <button
-              onClick={handleShare}
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 5,
-                fontSize: '.78rem', fontWeight: 700, color: 'var(--coral)',
-                background: 'none', border: 'none', padding: 0, cursor: 'pointer',
-              }}
-            >
-              {copied ? '✓ Copied!' : '🔗 Share'}
-            </button>
-          </div>
+          <button
+            onClick={handleShare}
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 5,
+              fontSize: '.78rem', fontWeight: 700, color: 'var(--coral)',
+              background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+            }}
+          >
+            {copied ? '✓ Copied!' : '🔗 Share'}
+          </button>
 
           <label className="visited-toggle" onClick={toggleVisited}>
             <div className={`visited-check ${entry.visited ? 'checked' : ''}`}>{entry.visited ? '✓' : ''}</div>
