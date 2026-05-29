@@ -54,10 +54,14 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
           </div>
         )}
 
-        {playground.toddlerFriendly && (
+        {(playground.toddlerFriendly || playground.hasRestrooms || playground.hasParking || playground.hasPicnicTables) && (
           <div className="detail-section">
+            <div className="detail-section-label">Amenities</div>
             <div className="amenity-grid">
-              <span className="badge badge-blue">🧒 Tot Lot / Toddler Playground</span>
+              {playground.toddlerFriendly && <span className="badge badge-blue">🧒 Children's Play Area</span>}
+              {playground.hasRestrooms    && <span className="badge badge-green">🚻 Restrooms</span>}
+              {playground.hasParking      && <span className="badge badge-yellow">🅿️ Parking</span>}
+              {playground.hasPicnicTables && <span className="badge badge-yellow">🪑 Picnic Area</span>}
             </div>
           </div>
         )}

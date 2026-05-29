@@ -8,6 +8,9 @@ import { useLocalData } from './hooks/useLocalData'
 
 const DEFAULT_FILTERS = {
   toddlerFriendly: false,
+  hasRestrooms: false,
+  hasParking: false,
+  hasPicnicTables: false,
   visitedOnly: false,
   neighborhood: '',
 }
@@ -30,6 +33,9 @@ export default function App() {
   const filtered = useMemo(() => {
     return playgrounds.filter(pg => {
       if (filters.toddlerFriendly && !pg.toddlerFriendly) return false
+      if (filters.hasRestrooms    && !pg.hasRestrooms)    return false
+      if (filters.hasParking      && !pg.hasParking)      return false
+      if (filters.hasPicnicTables && !pg.hasPicnicTables) return false
       if (filters.visitedOnly && !getEntry(pg.id).visited) return false
       if (filters.neighborhood && pg.neighborhood !== filters.neighborhood) return false
       if (search) {

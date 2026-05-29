@@ -3,9 +3,11 @@ import React from 'react'
 function Badges({ pg, visited }) {
   return (
     <div className="card-badges">
-      {visited && <span className="badge badge-visited">✓ Visited</span>}
-      {pg.toddlerFriendly && <span className="badge badge-blue">🧒 Tot Lot</span>}
-      {pg.propertyType && <span className="badge badge-green">{pg.propertyType}</span>}
+      {visited            && <span className="badge badge-visited">✓ Visited</span>}
+      {pg.toddlerFriendly && <span className="badge badge-blue">🧒 Play Area</span>}
+      {pg.hasRestrooms    && <span className="badge badge-green">🚻 Restrooms</span>}
+      {pg.hasParking      && <span className="badge badge-yellow">🅿️ Parking</span>}
+      {pg.hasPicnicTables && <span className="badge badge-yellow">🪑 Picnic</span>}
     </div>
   )
 }
