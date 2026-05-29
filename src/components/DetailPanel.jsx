@@ -65,12 +65,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
                 {playground.address}{playground.neighborhood ? ` · ${playground.neighborhood}` : ''}
               </div>
             </div>
-            <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
-              <button className="btn btn-ghost btn-sm" onClick={handleShare} style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                {copied ? '✓ Copied!' : '🔗 Share'}
-              </button>
-              <button className="btn btn-ghost btn-sm" onClick={onClose}>✕</button>
-            </div>
+            <button className="btn btn-ghost btn-sm" onClick={onClose} style={{ flexShrink: 0 }}>✕</button>
           </div>
 
           {(playground.toddlerFriendly || playground.hasRestrooms || playground.hasParking || playground.hasPicnicTables) && (
@@ -82,18 +77,30 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             </div>
           )}
 
-          <a
-            href={mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: 5,
-              fontSize: '.78rem', fontWeight: 700, color: 'var(--sky)',
-              textDecoration: 'none',
-            }}
-          >
-            🗺️ Open in Google Maps
-          </a>
+          <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 5,
+                fontSize: '.78rem', fontWeight: 700, color: 'var(--sky)',
+                textDecoration: 'none',
+              }}
+            >
+              🗺️ Google Maps
+            </a>
+            <button
+              onClick={handleShare}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 5,
+                fontSize: '.78rem', fontWeight: 700, color: 'var(--coral)',
+                background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+              }}
+            >
+              {copied ? '✓ Copied!' : '🔗 Share'}
+            </button>
+          </div>
 
           <label className="visited-toggle" onClick={toggleVisited}>
             <div className={`visited-check ${entry.visited ? 'checked' : ''}`}>{entry.visited ? '✓' : ''}</div>
