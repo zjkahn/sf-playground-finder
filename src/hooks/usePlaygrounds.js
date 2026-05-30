@@ -6,6 +6,15 @@ const FACILITIES_URL = 'https://data.sfgov.org/resource/ib5c-xgwu.json?$limit=50
 
 const PARK_TYPES = new Set(['neighborhood park or playground', 'mini park', 'regional park'])
 
+// Human-readable names for Golden Gate Park sections (keyed by property_id)
+const GGP_NAMES = {
+  '756665': 'Panhandle Playground',
+  '756666': '9th & Fulton Playground',
+  '756668': 'Mothers Meadow Playground',
+  '756670': 'Boat Children\'s Play Area',
+  '957231': 'Koret Children\'s Quarter',
+}
+
 // Map facility_type values → amenity flags
 const TODDLER_TYPES  = new Set(['children\'s play area', 'childrens play area', 'nature exploration area'])
 const RESTROOM_TYPES = new Set(['restroom'])
@@ -34,7 +43,7 @@ function parsePG(raw, amenities) {
   const e = enriched[id] || {}
   return {
     id,
-    name: raw.property_name || 'Unnamed Park',
+    name: GGP_NAMES[raw.property_id] || raw.property_name || 'Unnamed Park',
     address: [raw.address, raw.zipcode].filter(Boolean).join(', ') || 'San Francisco, CA',
     neighborhood: raw.planning_neighborhood || '',
     propertyType: raw.propertytype || '',
