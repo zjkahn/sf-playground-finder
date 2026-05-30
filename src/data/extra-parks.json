@@ -1,0 +1,18 @@
+[
+  { "id": "extra-003", "name": "Esmeralda Slide Park", "lat": 37.7435157, "lng": -122.4181306, "neighborhood": "Bernal Heights", "address": "Esmeralda Ave, San Francisco, CA" },
+  { "id": "extra-004", "name": "Helen Diller Civic Center Playground", "lat": 37.7795354, "lng": -122.4172523, "neighborhood": "Civic Center", "address": "Civic Center, San Francisco, CA" },
+  { "id": "extra-005", "name": "Salesforce Park Playground", "lat": 37.7889703, "lng": -122.3968055, "neighborhood": "Transbay", "address": "425 Mission St, San Francisco, CA" },
+  { "id": "extra-006", "name": "Elinor Friend Playground", "lat": 37.7341086, "lng": -122.5029287, "neighborhood": "Sunset", "address": "Elinor Ave, San Francisco, CA" },
+  { "id": "extra-007", "name": "Huntington Children's Play Area", "lat": 37.7924202, "lng": -122.4122171, "neighborhood": "Nob Hill", "address": "Huntington Park, San Francisco, CA" },
+  { "id": "extra-008", "name": "Visitacion Valley Greenway Playground", "lat": 37.7144826, "lng": -122.4057917, "neighborhood": "Visitacion Valley", "address": "Visitacion Valley, San Francisco, CA" },
+  { "id": "extra-009", "name": "Midtown Terrace Playground", "lat": 37.7518065, "lng": -122.4557322, "neighborhood": "Midtown Terrace", "address": "Clarendon Ave, San Francisco, CA" },
+  { "id": "extra-010", "name": "Imagination Playhouse", "lat": 37.780511, "lng": -122.4799941, "neighborhood": "Inner Richmond", "address": "Commonwealth Ave, San Francisco, CA" },
+  { "id": "extra-011", "name": "Head & Brotherhood Mini Park", "lat": 37.7127195, "lng": -122.4644335, "neighborhood": "Visitacion Valley", "address": "Head St & Brotherhood Way, San Francisco, CA" },
+  { "id": "extra-012", "name": "Beach Chalet Athletic Fields Playground", "lat": 37.7669589, "lng": -122.5080269, "neighborhood": "Golden Gate Park", "address": "Great Hwy & Fulton St, San Francisco, CA" },
+  { "id": "extra-013", "name": "Compton Playground", "lat": 37.7947286, "lng": -122.4750054, "neighborhood": "Richmond", "address": "Compton Rd, San Francisco, CA" },
+  { "id": "extra-014", "name": "Amatury Park Playground", "lat": 37.7959568, "lng": -122.4687565, "neighborhood": "Richmond", "address": "Amatury Loop, San Francisco, CA" },
+  { "id": "extra-015", "name": "Unity Plaza Playground", "lat": 37.7239598, "lng": -122.4534602, "neighborhood": "Excelsior", "address": "Unity St, San Francisco, CA" },
+  { "id": "extra-016", "name": "Hunters Point East West Playground", "lat": 37.7281595, "lng": -122.3799857, "neighborhood": "Hunters Point", "address": "Hunters Point, San Francisco, CA" },
+  { "id": "extra-017", "name": "Woods Yard Park Playground", "lat": 37.757638, "lng": -122.390733, "neighborhood": "Potrero Hill", "address": "Woods Yard, San Francisco, CA" },
+  { "id": "extra-018", "name": "Sandy Park", "lat": 37.7390132, "lng": -122.4494625, "neighborhood": "Glen Park", "address": "Sandy St, San Francisco, CA" }
+]

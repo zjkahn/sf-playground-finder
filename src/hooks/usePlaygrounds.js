@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import enriched from '../data/enriched.json'
+import extraParks from '../data/extra-parks.json'
 
 const PARKS_URL      = 'https://data.sfgov.org/resource/gtr9-ntp6.json?$limit=500'
 const FACILITIES_URL = 'https://data.sfgov.org/resource/ib5c-xgwu.json?$limit=5000&$select=property_id,facility_type'
@@ -81,7 +82,27 @@ export function usePlaygrounds() {
           .filter(p => p.lat !== null && p.lng !== null)
           .filter(p => PARK_TYPES.has(p.propertyType.toLowerCase()))
           .filter(p => p.toddlerFriendly)
-        setPlaygrounds(parsed)
+
+        // Merge in supplemental parks not in SF Open Data
+        const extras = extraParks.map(p => {
+          const e = enriched[p.id] || {}
+          return {
+            ...p,
+            propertyType: 'neighborhood park or playground',
+            toddlerFriendly: true,
+            hasRestrooms: false,
+            hasParking: false,
+            hasPicnicTables: false,
+            ageRange:      e.ageRange      ?? [],
+            shade:         e.shade         ?? null,
+            equipment:     e.equipment     ?? [],
+            crowdPatterns: e.crowdPatterns ?? '',
+            googleRating:  e.googleRating  ?? null,
+            reviewCount:   e.reviewCount   ?? 0,
+          }
+        })
+
+        setPlaygrounds([...parsed, ...extras])
         setLoading(false)
       })
       .catch(err => {
