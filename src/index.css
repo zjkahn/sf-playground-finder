@@ -510,7 +510,8 @@ html, body, #root {
   .mobile-hidden  { opacity: 0; visibility: hidden;  z-index: 0; pointer-events: none; }
 
   .app-header .subtitle { display: none; }
-  .detail-panel { max-height: 48%; overflow-y: auto; width: 100%; left: 0; transform: none; min-width: unset; }
+  .detail-panel { height: 35%; overflow-y: auto; width: 100%; left: 0; transform: none; min-width: unset; }
+  .detail-panel .notes-textarea { min-height: 36px; max-height: 52px; resize: none; }
   .near-me-btn { top: 62px; } /* clear the chip bar */
 
   .map-filter-bar {
@@ -525,7 +526,6 @@ html, body, #root {
     scrollbar-width: none;
   }
   .map-filter-bar::-webkit-scrollbar { display: none; }
-  .detail-panel .notes-textarea { min-height: 36px; max-height: 52px; resize: none; }
   .playground-list { padding: 8px; gap: 6px; }
 
   /* Tab bar */
