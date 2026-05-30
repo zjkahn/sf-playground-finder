@@ -37,7 +37,10 @@ export default function PlaygroundList({ playgrounds, selected, onSelect, getEnt
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
               <div className="card-title">{pg.name}</div>
-              {distLabel && <span style={{ fontSize: '.72rem', fontWeight: 700, color: 'var(--sky)', flexShrink: 0, marginLeft: 6 }}>{distLabel}</span>}
+              <div style={{ display: 'flex', gap: 6, alignItems: 'baseline', flexShrink: 0, marginLeft: 6 }}>
+                {pg.googleRating && pg.reviewCount >= 5 && <span style={{ fontSize: '.72rem', fontWeight: 700, color: 'var(--text-muted)' }}>⭐ {pg.googleRating.toFixed(1)} · {pg.reviewCount} reviews</span>}
+                {distLabel && <span style={{ fontSize: '.72rem', fontWeight: 700, color: 'var(--sky)' }}>{distLabel}</span>}
+              </div>
             </div>
             <div className="card-address">{pg.address}{pg.neighborhood ? ` · ${pg.neighborhood}` : ''}</div>
             <Badges pg={pg} visited={entry.visited} favorite={entry.favorite} />

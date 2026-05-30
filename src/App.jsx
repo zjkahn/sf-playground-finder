@@ -84,6 +84,12 @@ export default function App() {
     })
 
     if (sortBy === 'az')       return [...list].sort((a, b) => a.name.localeCompare(b.name))
+    if (sortBy === 'rating')   return [...list].sort((a, b) => {
+      const aRating = (a.reviewCount ?? 0) >= 5 ? (a.googleRating ?? 0) : 0
+      const bRating = (b.reviewCount ?? 0) >= 5 ? (b.googleRating ?? 0) : 0
+      return bRating - aRating
+    })
+    if (sortBy === 'popular')  return [...list].sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0))
     if (sortBy === 'distance') return [...list].sort((a, b) => distanceMiles(a) - distanceMiles(b))
     return list
   }, [playgrounds, filters, search, sortBy, userLocation, getEntry])

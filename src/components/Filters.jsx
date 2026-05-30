@@ -59,6 +59,8 @@ export default function Filters({ filters, onChange, neighborhoods, search, onSe
           style={{ flex: '0 0 auto', width: 'auto' }}
         >
           <option value="az">Sort: A–Z</option>
+          <option value="rating">Sort: Top Rated</option>
+          <option value="popular">Sort: Most Popular</option>
           <option value="distance">Sort: Nearest</option>
         </select>
         <button
