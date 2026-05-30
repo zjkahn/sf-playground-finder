@@ -7,6 +7,10 @@ const CHIPS = [
   { key: 'hasPicnicTables', label: '🪑 Picnic Area' },
   { key: 'favoritesOnly',   label: '⭐ Favorites' },
   { key: 'visitedOnly',     label: '✓ Visited' },
+  { key: 'ageToddler',      label: '🍼 Toddler' },
+  { key: 'agePreschool',    label: '🎒 Preschool' },
+  { key: 'ageBigKids',      label: '🧗 Big Kids' },
+  { key: 'mostlyShaded',    label: '🌳 Shaded' },
 ]
 
 export default function Filters({ filters, onChange, neighborhoods, search, onSearch, sortBy, onSort, hasLocation, onNearMe, onSurpriseMe }) {
@@ -59,7 +63,7 @@ export default function Filters({ filters, onChange, neighborhoods, search, onSe
         </select>
         <button
           className="btn btn-ghost btn-sm"
-          onClick={() => onChange({ toddlerFriendly: false, hasRestrooms: false, hasParking: false, hasPicnicTables: false, visitedOnly: false, neighborhood: '' })}
+          onClick={() => onChange({ toddlerFriendly: false, hasRestrooms: false, hasParking: false, hasPicnicTables: false, favoritesOnly: false, visitedOnly: false, ageToddler: false, agePreschool: false, ageBigKids: false, mostlyShaded: false, neighborhood: '' })}
         >
           Clear
         </button>

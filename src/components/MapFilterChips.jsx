@@ -7,6 +7,10 @@ const CHIPS = [
   { key: 'hasPicnicTables', label: '🪑 Picnic' },
   { key: 'favoritesOnly',   label: '⭐ Favorites' },
   { key: 'visitedOnly',     label: '✓ Visited' },
+  { key: 'ageToddler',      label: '🍼 Toddler' },
+  { key: 'agePreschool',    label: '🎒 Preschool' },
+  { key: 'ageBigKids',      label: '🧗 Big Kids' },
+  { key: 'mostlyShaded',    label: '🌳 Shaded' },
 ]
 
 export default function MapFilterChips({ filters, onChange }) {
@@ -30,7 +34,7 @@ export default function MapFilterChips({ filters, onChange }) {
       {activeCount > 0 && (
         <button
           className="map-filter-chip map-filter-clear"
-          onClick={() => onChange({ ...filters, toddlerFriendly: false, hasRestrooms: false, hasParking: false, hasPicnicTables: false, favoritesOnly: false, visitedOnly: false })}
+          onClick={() => onChange({ ...filters, toddlerFriendly: false, hasRestrooms: false, hasParking: false, hasPicnicTables: false, favoritesOnly: false, visitedOnly: false, ageToddler: false, agePreschool: false, ageBigKids: false, mostlyShaded: false })}
         >
           Clear ✕
         </button>

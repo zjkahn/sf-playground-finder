@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import enriched from '../data/enriched.json'
 
 const PARKS_URL      = 'https://data.sfgov.org/resource/gtr9-ntp6.json?$limit=500'
 const FACILITIES_URL = 'https://data.sfgov.org/resource/ib5c-xgwu.json?$limit=5000&$select=property_id,facility_type'
@@ -29,8 +30,10 @@ function parsePG(raw, amenities) {
   const lat = parseFloat(raw.latitude)
   const lng = parseFloat(raw.longitude)
   const a = amenities[raw.property_id] || {}
+  const id = String(raw.objectid || raw.property_id || Math.random())
+  const e = enriched[id] || {}
   return {
-    id: String(raw.objectid || raw.property_id || Math.random()),
+    id,
     name: raw.property_name || 'Unnamed Park',
     address: [raw.address, raw.zipcode].filter(Boolean).join(', ') || 'San Francisco, CA',
     neighborhood: raw.planning_neighborhood || '',
@@ -42,6 +45,13 @@ function parsePG(raw, amenities) {
     hasParking:      a.hasParking       || false,
     hasPicnicTables: a.hasPicnicTables  || false,
     rawAmenities: raw,
+    // Enriched from Google Places reviews
+    ageRange:      e.ageRange      ?? [],
+    shade:         e.shade         ?? null,
+    equipment:     e.equipment     ?? [],
+    crowdPatterns: e.crowdPatterns ?? '',
+    googleRating:  e.googleRating  ?? null,
+    reviewCount:   e.reviewCount   ?? 0,
   }
 }
 

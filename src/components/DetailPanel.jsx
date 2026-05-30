@@ -89,6 +89,35 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             </div>
           )}
 
+          {/* Enriched data from Google Places */}
+          {(playground.ageRange?.length > 0 || playground.shade || playground.googleRating) && (
+            <div className="amenity-grid">
+              {playground.ageRange?.includes('toddler')   && <span className="badge badge-purple">🍼 Toddler</span>}
+              {playground.ageRange?.includes('preschool') && <span className="badge badge-purple">🎒 Preschool</span>}
+              {playground.ageRange?.includes('bigKids')   && <span className="badge badge-purple">🧗 Big Kids</span>}
+              {playground.shade === 'mostly shaded' && <span className="badge badge-green">🌳 Mostly Shaded</span>}
+              {playground.shade === 'partial'       && <span className="badge badge-green">⛅ Partial Shade</span>}
+              {playground.shade === 'full sun'      && <span className="badge badge-yellow">☀️ Full Sun</span>}
+              {playground.googleRating && (
+                <span className="badge badge-gray">⭐ {playground.googleRating.toFixed(1)} · {playground.reviewCount} reviews</span>
+              )}
+            </div>
+          )}
+
+          {playground.equipment?.length > 0 && (
+            <div className="amenity-grid">
+              {playground.equipment.map(e => (
+                <span key={e} className="badge badge-gray">{e}</span>
+              ))}
+            </div>
+          )}
+
+          {playground.crowdPatterns && (
+            <div style={{ fontSize: '.75rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
+              {playground.crowdPatterns}
+            </div>
+          )}
+
           <button
             onClick={handleShare}
             style={{

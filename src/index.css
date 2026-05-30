@@ -265,7 +265,9 @@ html, body, #root {
 .badge-green  { background: var(--mint); color: var(--grass-dark); }
 .badge-yellow { background: var(--sun-light); color: #92400E; }
 .badge-favorite{ background: var(--sun-light); color: #92400E; }
-.badge-visited{ background: var(--grass); color: var(--white); }
+.badge-visited { background: var(--grass); color: var(--white); }
+.badge-purple  { background: #EDE9FE; color: #5B21B6; }
+.badge-gray    { background: #F3F4F6; color: #374151; }
 
 /* ── Map ── */
 .map-container {

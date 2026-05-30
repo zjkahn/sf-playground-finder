@@ -14,6 +14,10 @@ const DEFAULT_FILTERS = {
   hasPicnicTables: false,
   favoritesOnly: false,
   visitedOnly: false,
+  ageToddler: false,
+  agePreschool: false,
+  ageBigKids: false,
+  mostlyShaded: false,
   neighborhood: '',
 }
 
@@ -66,7 +70,11 @@ export default function App() {
       if (filters.hasParking      && !pg.hasParking)      return false
       if (filters.hasPicnicTables && !pg.hasPicnicTables) return false
       if (filters.favoritesOnly && !getEntry(pg.id).favorite) return false
-      if (filters.visitedOnly && !getEntry(pg.id).visited) return false
+      if (filters.visitedOnly   && !getEntry(pg.id).visited)  return false
+      if (filters.ageToddler    && !pg.ageRange.includes('toddler'))   return false
+      if (filters.agePreschool  && !pg.ageRange.includes('preschool')) return false
+      if (filters.ageBigKids    && !pg.ageRange.includes('bigKids'))   return false
+      if (filters.mostlyShaded  && pg.shade !== 'mostly shaded')       return false
       if (filters.neighborhood && pg.neighborhood !== filters.neighborhood) return false
       if (search) {
         const q = search.toLowerCase()
