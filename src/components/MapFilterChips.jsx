@@ -1,0 +1,40 @@
+import React from 'react'
+
+const CHIPS = [
+  { key: 'toddlerFriendly', label: '🧒 Play Area' },
+  { key: 'hasRestrooms',    label: '🚻 Restrooms' },
+  { key: 'hasParking',      label: '🅿️ Parking' },
+  { key: 'hasPicnicTables', label: '🪑 Picnic' },
+  { key: 'favoritesOnly',   label: '⭐ Favorites' },
+  { key: 'visitedOnly',     label: '✓ Visited' },
+]
+
+export default function MapFilterChips({ filters, onChange }) {
+  function toggle(key) {
+    onChange({ ...filters, [key]: !filters[key] })
+  }
+
+  const activeCount = CHIPS.filter(c => filters[c.key]).length
+
+  return (
+    <div className="map-filter-bar">
+      {CHIPS.map(({ key, label }) => (
+        <button
+          key={key}
+          className={`map-filter-chip ${filters[key] ? 'active' : ''}`}
+          onClick={() => toggle(key)}
+        >
+          {label}
+        </button>
+      ))}
+      {activeCount > 0 && (
+        <button
+          className="map-filter-chip map-filter-clear"
+          onClick={() => onChange({ ...filters, toddlerFriendly: false, hasRestrooms: false, hasParking: false, hasPicnicTables: false, favoritesOnly: false, visitedOnly: false })}
+        >
+          Clear ✕
+        </button>
+      )}
+    </div>
+  )
+}

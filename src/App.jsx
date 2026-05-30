@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react'
 import Map from './components/Map'
 import Filters from './components/Filters'
+import MapFilterChips from './components/MapFilterChips'
 import PlaygroundList from './components/PlaygroundList'
 import DetailPanel from './components/DetailPanel'
 import { usePlaygrounds } from './hooks/usePlaygrounds'
@@ -152,6 +153,7 @@ export default function App() {
 
         {/* Map area */}
         <div className={`map-area ${mobileTab === 'map' ? 'mobile-active' : 'mobile-hidden'}`}>
+          <MapFilterChips filters={filters} onChange={setFilters} />
           <Map
             playgrounds={filtered}
             selected={selected}
