@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { getStreetViewUrl } from '../hooks/useParkImage'
+import { getStreetViewUrl, getPlacesPhotoUrl } from '../hooks/useParkImage'
 
 
 export default function DetailPanel({ playground, entry, onSave, onClose }) {
@@ -43,8 +43,13 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const photoSrc = getStreetViewUrl(playground.lat, playground.lng, 600, 400)
-  const largeSrc = getStreetViewUrl(playground.lat, playground.lng, 1200, 800)
+  const streetViewSrc = getStreetViewUrl(playground.lat, playground.lng, 600, 400)
+  const streetViewLargeSrc = getStreetViewUrl(playground.lat, playground.lng, 1200, 800)
+  const placesPhotoSrc = getPlacesPhotoUrl(playground.photoName, 800)
+  const placesPhotoLargeSrc = getPlacesPhotoUrl(playground.photoName, 1600)
+  const photoSrc = placesPhotoSrc || streetViewSrc
+  const largeSrc = placesPhotoLargeSrc || streetViewLargeSrc
+  const isPlacesPhoto = !!placesPhotoSrc
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(playground.name + ' ' + playground.address)}`
   const showPhoto = photoSrc && !photoFailed
 
@@ -153,7 +158,7 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
               fontSize: '.65rem', color: 'rgba(255,255,255,.8)',
               textAlign: 'right',
             }}>
-              🔍 Street View
+              {isPlacesPhoto ? '📸 Google Photo' : '🔍 Street View · may not show playground'}
             </div>
           </div>
         )}

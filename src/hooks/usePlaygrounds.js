@@ -62,6 +62,7 @@ function parsePG(raw, amenities) {
     crowdPatterns: e.crowdPatterns ?? '',
     googleRating:  e.googleRating  ?? null,
     reviewCount:   e.reviewCount   ?? 0,
+    photoName:     e.photoName     ?? null,
   }
 }
 
@@ -99,6 +100,7 @@ export function usePlaygrounds() {
             crowdPatterns: e.crowdPatterns ?? '',
             googleRating:  e.googleRating  ?? null,
             reviewCount:   e.reviewCount   ?? 0,
+            photoName:     e.photoName     ?? null,
           }
         })
 

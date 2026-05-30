@@ -9,6 +9,12 @@ export function getStreetViewUrl(lat, lng, width = 600, height = 200) {
   )
 }
 
+// Build a Places API photo media URL — browser follows the redirect automatically
+export function getPlacesPhotoUrl(photoName, maxWidth = 800) {
+  if (!photoName || !GOOGLE_KEY) return null
+  return `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=${maxWidth}&key=${GOOGLE_KEY}`
+}
+
 // Street View Metadata API — check if imagery actually exists at this location
 const metaCache = {}
 
