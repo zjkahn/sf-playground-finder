@@ -112,12 +112,6 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             </div>
           )}
 
-          {playground.crowdPatterns && (
-            <div style={{ fontSize: '.75rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
-              {playground.crowdPatterns}
-            </div>
-          )}
-
           <button
             onClick={handleShare}
             style={{

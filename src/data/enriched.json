@@ -1,1 +1,1617 @@
-{}
+{
+  "3780": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.7,
+    "reviewCount": 427,
+    "placeId": "ChIJOVObBVCHhYAREYUH1plPZwo"
+  },
+  "3786": {
+    "ageRange": [],
+    "shade": "full sun",
+    "equipment": [],
+    "crowdPatterns": "A lovely park, so necessary in a busy urban environment. The park is huge, so there’s a lot of space to just walk around without feeling crowded",
+    "googleRating": 4.8,
+    "reviewCount": 44395,
+    "placeId": "ChIJY_dFYHKHhYARMKc772iLvnE"
+  },
+  "3795": {
+    "ageRange": [
+      "toddler",
+      "preschool",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 78,
+    "placeId": "ChIJ69OPjwuHhYARO4WX8v6tLm0"
+  },
+  "3797": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": null,
+    "reviewCount": 0,
+    "placeId": "ChIJAQCwjamHhYARTHywVc_6KAk"
+  },
+  "3803": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 2.7,
+    "reviewCount": 3,
+    "placeId": "ChIJ2Xn1agCBhYARj7uw4HWZqcM"
+  },
+  "3807": {
+    "ageRange": [],
+    "shade": "partial",
+    "equipment": [
+      "slide",
+      "climbing structure",
+      "sandbox"
+    ],
+    "crowdPatterns": "Loved the lush garden and enjoyed the quiet from the city. Secluded playground, very quiet and intimate, almost your private backyard",
+    "googleRating": 4.6,
+    "reviewCount": 68,
+    "placeId": "ChIJtwZLZ--AhYARZf-XBpHYnFU"
+  },
+  "3816": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "It’s quiet, hilly, and offers some of the best views in the city. It felt like a nice break from the busy city",
+    "googleRating": 4.7,
+    "reviewCount": 2699,
+    "placeId": "ChIJC3O0GsGAhYAR4JK4ut4xPsM"
+  },
+  "3817": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.6,
+    "reviewCount": 423,
+    "placeId": "ChIJ-5VzQC6HhYARcutXwB4MICM"
+  },
+  "3818": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "sandbox"
+    ],
+    "crowdPatterns": "It's a good park when there isn't a bunch if kids then gets crowded. My kids love this place not crowded kids grew up finding friends, being bored and figuring out what to do about it",
+    "googleRating": 4.4,
+    "reviewCount": 66,
+    "placeId": "ChIJQ7TzcQSHhYAR1adGzN4abRE"
+  },
+  "3833": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 5,
+    "reviewCount": 3,
+    "placeId": "ChIJRz9JegCHhYAR2i6r7bteoh4"
+  },
+  "3834": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 5,
+    "reviewCount": 8,
+    "placeId": "ChIJw_ngFIaBhYARxGseeiZ4eYU"
+  },
+  "3839": {
+    "ageRange": [],
+    "shade": "mostly shaded",
+    "equipment": [
+      "swings",
+      "slide"
+    ],
+    "crowdPatterns": "Good little playground and otherwise quiet and peaceful",
+    "googleRating": 4.7,
+    "reviewCount": 451,
+    "placeId": "ChIJraufRSeBhYARt-3p5SCli4A"
+  },
+  "3841": {
+    "ageRange": [
+      "toddler",
+      "preschool",
+      "bigKids"
+    ],
+    "shade": "full sun",
+    "equipment": [
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Can be quite crowded. The bathrooms are well cleaned and never crowded with any nonsense",
+    "googleRating": 4.8,
+    "reviewCount": 204,
+    "placeId": "ChIJ9zcEWBiHhYAR8wwsgIR8-Kw"
+  },
+  "3847": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.7,
+    "reviewCount": 427,
+    "placeId": "ChIJOVObBVCHhYAREYUH1plPZwo"
+  },
+  "3848": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.7,
+    "reviewCount": 427,
+    "placeId": "ChIJOVObBVCHhYAREYUH1plPZwo"
+  },
+  "3850": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": "mostly shaded",
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure",
+      "merry-go-round"
+    ],
+    "crowdPatterns": "Good number of swings for a busy area. Parking can be tough on busy days",
+    "googleRating": 4.8,
+    "reviewCount": 1219,
+    "placeId": "ChIJVQuTb1CHhYARdu5g9JG38zQ"
+  },
+  "3854": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "A lovely quiet playground tucked away in a nice setting. Nice and quiet",
+    "googleRating": 4.7,
+    "reviewCount": 40,
+    "placeId": "ChIJc52JY9OAhYARSuM4TIcnlQc"
+  },
+  "3863": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "baby swings",
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.6,
+    "reviewCount": 130,
+    "placeId": "ChIJff8mPKSHhYAR-2myWZYUoHM"
+  },
+  "3868": {
+    "ageRange": [
+      "toddler",
+      "preschool",
+      "bigKids"
+    ],
+    "shade": "full sun",
+    "equipment": [
+      "slide",
+      "climbing structure",
+      "sandbox"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.3,
+    "reviewCount": 66,
+    "placeId": "ChIJpwqhARuHhYAR8qUtoxnE9Nc"
+  },
+  "3872": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.6,
+    "reviewCount": 18,
+    "placeId": "ChIJDVQJZumAhYARosQzDzKBV0E"
+  },
+  "3873": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "baby swings",
+      "swings",
+      "slide",
+      "climbing structure",
+      "seesaw",
+      "merry-go-round"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.7,
+    "reviewCount": 552,
+    "placeId": "ChIJxyJ1BfCAhYARSZU6k5EBy8M"
+  },
+  "3882": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "climbing structure",
+      "sandbox"
+    ],
+    "crowdPatterns": "So if you don't have kids with you and you want to spend a quiet evening with your signif. Comfortable always  like this little park : lovely, quiet, good for my doggie   quiet oasis",
+    "googleRating": 4.6,
+    "reviewCount": 47,
+    "placeId": "ChIJDwhM3T6HhYARmj-H1q9dfQg"
+  },
+  "3883": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": "mostly shaded",
+    "equipment": [
+      "slide",
+      "sandbox"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.6,
+    "reviewCount": 127,
+    "placeId": "ChIJAxA7qDOHhYARiiPusPUhqG0"
+  },
+  "3884": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 3.9,
+    "reviewCount": 37,
+    "placeId": "ChIJ6_0NPIuAhYARTIffZsH5jso"
+  },
+  "3886": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Usually pretty quiet good place nice grassy area",
+    "googleRating": 4.3,
+    "reviewCount": 61,
+    "placeId": "ChIJ9zppSjSHhYARYKwOaWR_tjw"
+  },
+  "3887": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": "partial",
+    "equipment": [],
+    "crowdPatterns": "Indoor basketball courts are always packed",
+    "googleRating": 4.3,
+    "reviewCount": 89,
+    "placeId": "ChIJZVwyuvKAhYARaaTVL4c--E0"
+  },
+  "3888": {
+    "ageRange": [],
+    "shade": "mostly shaded",
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.4,
+    "reviewCount": 799,
+    "placeId": "ChIJJdhU9k2HhYARiq91XhmsfX8"
+  },
+  "3893": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 392,
+    "placeId": "ChIJcYyU_keHhYARhP_hQ_uAvc4"
+  },
+  "3894": {
+    "ageRange": [],
+    "shade": "full sun",
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "Great place to enjoy a lunch or if you need sone piece and quiet. Weeds are abundant, not sure what the park staff does besides empty trash and try to keep bathrooms clean",
+    "googleRating": 4.3,
+    "reviewCount": 104,
+    "placeId": "ChIJUz0yChGHhYAR3bKVv95HgeE"
+  },
+  "3898": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.4,
+    "reviewCount": 117,
+    "placeId": "ChIJs_EzfdmAhYAR_vhGLFtHBZg"
+  },
+  "3901": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": "mostly shaded",
+    "equipment": [
+      "climbing structure",
+      "sandbox"
+    ],
+    "crowdPatterns": "Picnic tables, a quiet setting, trash cans, and a tidy little park. It is really quiet here if you want to relax",
+    "googleRating": 4.3,
+    "reviewCount": 71,
+    "placeId": "ChIJMSWC-_KAhYAR_fXq7INc8bM"
+  },
+  "3902": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.4,
+    "reviewCount": 348,
+    "placeId": "ChIJlRvon4yAhYARMw91ij6m610"
+  },
+  "3904": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Beautiful quiet nook in the city to see the view. Great for a short walk, letting kids run around, or bringing a blanket for a quiet rest in the shade",
+    "googleRating": 4.6,
+    "reviewCount": 249,
+    "placeId": "ChIJdZA0ojV-j4AR3fv2Vtt5yO8"
+  },
+  "3910": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": "partial",
+    "equipment": [],
+    "crowdPatterns": "It always seem to be empty on the weekdays",
+    "googleRating": 4.1,
+    "reviewCount": 63,
+    "placeId": "ChIJDcy-ubyAhYARHgNPUjtEswE"
+  },
+  "3914": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 5,
+    "reviewCount": 11,
+    "placeId": "ChIJ-33pJXyBhYARqI1PNqcm0rI"
+  },
+  "3917": {
+    "ageRange": [
+      "toddler",
+      "preschool"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "This helps keep them busy, out of trouble and safe till they get back home from school",
+    "googleRating": 4.4,
+    "reviewCount": 66,
+    "placeId": "ChIJN-95z4iBhYARyXPbuqz2aSk"
+  },
+  "3918": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Court is clean, not too crowded. Good crowd for pickup games",
+    "googleRating": 4.3,
+    "reviewCount": 91,
+    "placeId": "ChIJz-25d4GAhYARtl9vIfnlbMY"
+  },
+  "3921": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "sandbox",
+      "water play"
+    ],
+    "crowdPatterns": "Nice play ground, not very busy",
+    "googleRating": 4.4,
+    "reviewCount": 94,
+    "placeId": "ChIJx2wy-1WHhYARLqGng5riX1M"
+  },
+  "3922": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "It's a crowded, indoor, public pool but you can have birthday parties there",
+    "googleRating": 4.3,
+    "reviewCount": 250,
+    "placeId": "ChIJR_ekLbiAhYARC0-swgr7Zf8"
+  },
+  "3923": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Park was completely empty when we visited",
+    "googleRating": 4.5,
+    "reviewCount": 33,
+    "placeId": "ChIJ893dcUOBhYAR0CFym3pRYmI"
+  },
+  "3924": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "Nice park in a quiet neighborhood",
+    "googleRating": 4.4,
+    "reviewCount": 443,
+    "placeId": "ChIJnf3sn8x_j4ARZ2gNoDGp3wk"
+  },
+  "3925": {
+    "ageRange": [],
+    "shade": "mostly shaded",
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure",
+      "seesaw"
+    ],
+    "crowdPatterns": "Great for walking and enjoying nature away from the busy streets. Try it but don't tell many people about it cuz i'd like to keep it a somewhat quiet space",
+    "googleRating": 4.5,
+    "reviewCount": 134,
+    "placeId": "ChIJwZ5aoKGAhYAR9Ig2tJo88Yg"
+  },
+  "3926": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Nice park always quiet although last time there was an drunk at dusk on one of the park benches singing his heart out. It was delightfully quiet, low traffic and offered unique aerial views",
+    "googleRating": 4.7,
+    "reviewCount": 59,
+    "placeId": "ChIJpYQd6niAhYARvL_uLSnCdjM"
+  },
+  "3927": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 392,
+    "placeId": "ChIJeVFrGL2AhYARY6_S6u9DguU"
+  },
+  "3930": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "I recommend it to anyone who needs some quality quiet time. It’s a gorgeous and very well maintained park, not to mention extremely spacious and i not crowded at all",
+    "googleRating": 4.2,
+    "reviewCount": 561,
+    "placeId": "ChIJMb8k6YGAhYARcSOLWWOsvoI"
+  },
+  "3931": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.2,
+    "reviewCount": 24,
+    "placeId": "ChIJZ-WW-JCAhYARM0EErECe2Fg"
+  },
+  "3932": {
+    "ageRange": [],
+    "shade": "mostly shaded",
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure",
+      "water play"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.1,
+    "reviewCount": 196,
+    "placeId": "ChIJ42c_NJGAhYARM2H6TLpooJs"
+  },
+  "3933": {
+    "ageRange": [],
+    "shade": "full sun",
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "Even though there were a lot of people at the park when i visited, it was surprisingly quiet and calming. Then it was off to the next event on the busy schedule for the day",
+    "googleRating": 4.4,
+    "reviewCount": 719,
+    "placeId": "ChIJ6QW73rmAhYARNfD_XpgHsU4"
+  },
+  "3934": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Nice place to go if you wanna forget your in a busy city for a bit",
+    "googleRating": 4.4,
+    "reviewCount": 585,
+    "placeId": "ChIJv225NzB-j4ARVlS1BRuKM7o"
+  },
+  "3935": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "Plenty of people around but not crowded on a weekday afternoon. It’s a great spot for a quiet walk or just to unwind",
+    "googleRating": 4.5,
+    "reviewCount": 646,
+    "placeId": "ChIJ2XVVCaKAhYARg4v2LEG2hbw"
+  },
+  "3939": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "climbing structure",
+      "balance beam"
+    ],
+    "crowdPatterns": "It's very well utilized everytime i'm here but not crowded",
+    "googleRating": 4.5,
+    "reviewCount": 318,
+    "placeId": "ChIJT3zcKiV-j4AR94UAdVxse5M"
+  },
+  "3941": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": "partial",
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 204,
+    "placeId": "ChIJm392JKWAhYARrGl2_8YkYMw"
+  },
+  "3942": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "Nice field with a wonderful view, clean quiet and cozy     playground clean and a perfect place for outdoor excersise. Lovely view and quiet",
+    "googleRating": 4.5,
+    "reviewCount": 243,
+    "placeId": "ChIJdUEEFLR_j4ARHo6_zTIvyuY"
+  },
+  "3974": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": null,
+    "reviewCount": 0,
+    "placeId": "ChIJ2yZ-aQB9j4ARMFzgZl3U1hI"
+  },
+  "3979": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Quiet neighborhood. Simple quiet neighborhood park for kids and dog walking",
+    "googleRating": 4.7,
+    "reviewCount": 250,
+    "placeId": "ChIJ6YUZ04x9j4ARgwsb1H5HdnE"
+  },
+  "3981": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "baby swings",
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Usually pretty quiet, in a decent neighborhood. Quiet, clean, good maintenance and grounds",
+    "googleRating": 3.8,
+    "reviewCount": 32,
+    "placeId": "ChIJo6dQtLx9j4ARY9spbE61ixo"
+  },
+  "3983": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.4,
+    "reviewCount": 75,
+    "placeId": "ChIJSwSchMh9j4ARgT5xZaFXYsI"
+  },
+  "3984": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 5,
+    "reviewCount": 1,
+    "placeId": "ChIJYW4JQQB9j4ARX1m1kT09dwY"
+  },
+  "3986": {
+    "ageRange": [
+      "toddler",
+      "preschool"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.3,
+    "reviewCount": 272,
+    "placeId": "ChIJAanDApB9j4ARXMyW6xMs2_I"
+  },
+  "3987": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "The tennis court surface is a bit worn, but it gives the court a good bite for spin not too crowded. Very nice and relatively quiet playground",
+    "googleRating": 4.4,
+    "reviewCount": 114,
+    "placeId": "ChIJbX87x_N9j4ARXr3NGyoSo6w"
+  },
+  "3988": {
+    "ageRange": [],
+    "shade": "mostly shaded",
+    "equipment": [
+      "swings",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Fairly empty park, mostly older retired folk during the weekday afternoons. We enjoyed the quietness and the  view great little park, has barbecue picnic area",
+    "googleRating": 4.5,
+    "reviewCount": 143,
+    "placeId": "ChIJIQACBDV8j4ARwxS0LNmo7BA"
+  },
+  "3989": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure",
+      "sandbox"
+    ],
+    "crowdPatterns": "It’s tucked away in a cute little neighborhood, and it’s quiet despite traffic being all around",
+    "googleRating": 4.2,
+    "reviewCount": 67,
+    "placeId": "ChIJPVotIrd9j4ARb2rsXZzcft8"
+  },
+  "3992": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Plenty of parking, safe, and never too crowded",
+    "googleRating": 4.5,
+    "reviewCount": 162,
+    "placeId": "ChIJzdh50Zt9j4ARTlW4V9KsdrI"
+  },
+  "3994": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure",
+      "sandbox",
+      "seesaw",
+      "merry-go-round"
+    ],
+    "crowdPatterns": "Great variety but can be crowded at times. A very large but busy park with many regular exercise groups",
+    "googleRating": 4.6,
+    "reviewCount": 154,
+    "placeId": "ChIJzylD0YaHhYAR592dujYe9t4"
+  },
+  "3995": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": "full sun",
+    "equipment": [
+      "swings",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Nice place   nice clean safe friendly place to play basketball but usually pretty busy at nights & weekends",
+    "googleRating": 4.5,
+    "reviewCount": 239,
+    "placeId": "ChIJxdiOXnmHhYARe6JNdm9pKFw"
+  },
+  "3996": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide",
+      "sandbox"
+    ],
+    "crowdPatterns": "Pretty quiet playground",
+    "googleRating": 4.2,
+    "reviewCount": 161,
+    "placeId": "ChIJjfYDunB9j4ARfGSX-AlqDoA"
+  },
+  "3997": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Always a great show, although it's gotten quite crowded over the years. Fantastic free music shows, gets very busy very fast",
+    "googleRating": 4.8,
+    "reviewCount": 241,
+    "placeId": "ChIJnRIO9Lh9j4ARF4yzB2T4Qj0"
+  },
+  "3999": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": "mostly shaded",
+    "equipment": [
+      "swings",
+      "sandbox"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.3,
+    "reviewCount": 118,
+    "placeId": "ChIJ5UC0uet9j4ARrExeXNqgMP8"
+  },
+  "4002": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "It does get super packed on weekends and evenings. The 19th avenue corridor is busy and vehicles often drive to fast",
+    "googleRating": 4.6,
+    "reviewCount": 80,
+    "placeId": "ChIJG1N6lgV9j4ARiTfzQ6fsfnY"
+  },
+  "4005": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.8,
+    "reviewCount": 62,
+    "placeId": "ChIJ9YA9MvF9j4ARr10qCXJ2zes"
+  },
+  "4006": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Doesn't seem like it gets overly busy",
+    "googleRating": 4.4,
+    "reviewCount": 418,
+    "placeId": "ChIJaey8JS58j4ARc9AyoyKGqxM"
+  },
+  "4010": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "slide",
+      "sandbox"
+    ],
+    "crowdPatterns": "The slides are a blast and perfect for the younger crowd",
+    "googleRating": 4.5,
+    "reviewCount": 380,
+    "placeId": "ChIJDXbCwwV-j4ARQMfqfHS_h6o"
+  },
+  "4011": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Not too crowded, but parking is a little tricky. Usually empty",
+    "googleRating": 4.5,
+    "reviewCount": 6,
+    "placeId": "ChIJNZoD5wt_j4ARbA5nggPn-wc"
+  },
+  "4024": {
+    "ageRange": [
+      "toddler",
+      "preschool",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Others times kinda empty",
+    "googleRating": 4.6,
+    "reviewCount": 126,
+    "placeId": "ChIJtwyI84B-j4ARRwBA2wo_cjM"
+  },
+  "4025": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": "partial",
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 335,
+    "placeId": "ChIJv79V5Gh-j4AR2HqHsxbxKHw"
+  },
+  "4028": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide"
+    ],
+    "crowdPatterns": "The surrounding neighbors are chill and let's all remember to keep it clean, and quiet after hours",
+    "googleRating": 4.5,
+    "reviewCount": 244,
+    "placeId": "ChIJE70aiF6HhYARB3o7LWFDMJM"
+  },
+  "4029": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.7,
+    "reviewCount": 43,
+    "placeId": "ChIJsxUJBXp-j4ARwH7YgPhJyzE"
+  },
+  "4030": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "sandbox"
+    ],
+    "crowdPatterns": "It's just a quiet, safe place to sit or play with your dog or bring a child to play. Almost always empty",
+    "googleRating": 4.2,
+    "reviewCount": 21,
+    "placeId": "ChIJIaln-nB_j4ARQm4HdypWVkk"
+  },
+  "4036": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "Fun place to burn one quietly and to walk your dogs",
+    "googleRating": 4.5,
+    "reviewCount": 404,
+    "placeId": "ChIJo3rpxW9-j4ARFcEn-d_g5to"
+  },
+  "4037": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.3,
+    "reviewCount": 6,
+    "placeId": "ChIJ2xqXMq2BhYARW3w_Pt1Zk6Q"
+  },
+  "4038": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.7,
+    "reviewCount": 52,
+    "placeId": "ChIJ871KDoR9j4ARPqxCc8Tbz7g"
+  },
+  "4040": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "The town square also features a very busy kids area. Super clean nice farmers market, busy and well attended by folks from the neighborhood",
+    "googleRating": 4.5,
+    "reviewCount": 72,
+    "placeId": "ChIJG99jlxR-j4AR5fLH2tgiJRg"
+  },
+  "4044": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Great place very busy place",
+    "googleRating": 4.6,
+    "reviewCount": 135,
+    "placeId": "ChIJ_R532wR-j4ARvUDkjlL7CHk"
+  },
+  "4046": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.6,
+    "reviewCount": 187,
+    "placeId": "ChIJ7cJqhXN-j4ARpwxfrGRNo5g"
+  },
+  "4047": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide"
+    ],
+    "crowdPatterns": "Nice to play soccer and basketball here not to busy. Quiet and clean and beautiful  great place for the kids to play  the sandy park is outdated, full of splinters & rust",
+    "googleRating": 4,
+    "reviewCount": 41,
+    "placeId": "ChIJ24wg19h9j4ARsp-LoIqDTT8"
+  },
+  "4049": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Quiet surroundings with phil's coffee next to the tennis courts",
+    "googleRating": 4.5,
+    "reviewCount": 12,
+    "placeId": "ChIJM8gbJQx-j4ARpgLTa0x3p50"
+  },
+  "4051": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": "partial",
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "The park is always crowded and full of pretentious parents. If you want a park with people a little more down to earth and not so crowded, go to potrero del sol or garfield park",
+    "googleRating": 4.4,
+    "reviewCount": 99,
+    "placeId": "ChIJp4sqx09-j4AR6OyJ32GMjRA"
+  },
+  "4054": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "merry-go-round"
+    ],
+    "crowdPatterns": "Very quiet and clean, with large children playgrounds, in a residential area. It's not large, but it's perfectly formed, an oasis of calm in a busy city",
+    "googleRating": 4.6,
+    "reviewCount": 736,
+    "placeId": "ChIJa8VE6l5-j4ARbpOdYYKv888"
+  },
+  "4057": {
+    "ageRange": [],
+    "shade": "partial",
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "It gets a tad crowded on the day of the dead but that's part of the fun. There's also considerable background noise from the busy street and freeway overpasses",
+    "googleRating": 4.5,
+    "reviewCount": 444,
+    "placeId": "ChIJI-kHTUx-j4ARXZWVjoYDkIQ"
+  },
+  "4058": {
+    "ageRange": [
+      "preschool"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "Mostly street parking in a residential area but can be crowded on game days",
+    "googleRating": 4.4,
+    "reviewCount": 88,
+    "placeId": "ChIJJyjGk19-j4ARC5tMytzrH88"
+  },
+  "4059": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.8,
+    "reviewCount": 10,
+    "placeId": "ChIJScF-dFl-j4AR39xtIqt_O4o"
+  },
+  "4060": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4,
+    "reviewCount": 116,
+    "placeId": "ChIJsdoT9zt-j4AREyXLfbrlaGk"
+  },
+  "4061": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.8,
+    "reviewCount": 4,
+    "placeId": "ChIJuQOafwB_j4ARch2QeXu2QsU"
+  },
+  "4062": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.2,
+    "reviewCount": 169,
+    "placeId": "ChIJ_UhPpDl-j4AR1s2Kg2SAcdY"
+  },
+  "4063": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.2,
+    "reviewCount": 20,
+    "placeId": "ChIJz5x_R-1_j4ARqC52pq-CIA8"
+  },
+  "4064": {
+    "ageRange": [
+      "preschool",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "I've been going since i was a kid  a good place 😃 empty. Quite not to busy",
+    "googleRating": 4.2,
+    "reviewCount": 256,
+    "placeId": "ChIJawsFzU1-j4ARPrjczQy4kXY"
+  },
+  "4065": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide"
+    ],
+    "crowdPatterns": "Quiet park, very nice very dog and kid friendly. A cute little park, good quiet place to swing on swings or walk your dog",
+    "googleRating": 4.4,
+    "reviewCount": 77,
+    "placeId": "ChIJu5DesUF-j4ARvTGcExIJKlM"
+  },
+  "4066": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": "full sun",
+    "equipment": [
+      "swings",
+      "climbing structure",
+      "water play"
+    ],
+    "crowdPatterns": "Saludos23rd st fun, not too crowded a quiet and sweet park",
+    "googleRating": 4.3,
+    "reviewCount": 110,
+    "placeId": "ChIJuY-_FEl-j4AR8BdN97rDSY0"
+  },
+  "4069": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.6,
+    "reviewCount": 254,
+    "placeId": "ChIJL3M88Ud-j4ARKOu_oLmUWiE"
+  },
+  "4070": {
+    "ageRange": [
+      "toddler",
+      "preschool",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "baby swings",
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.7,
+    "reviewCount": 95,
+    "placeId": "ChIJgQ6LyKeAhYARZwoKi_poszs"
+  },
+  "4071": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "sandbox",
+      "merry-go-round"
+    ],
+    "crowdPatterns": "I hope it doesn't get crowded. Not too crowded",
+    "googleRating": 4.5,
+    "reviewCount": 57,
+    "placeId": "ChIJdbFhWU9-j4AROe6aC4QjG2s"
+  },
+  "4073": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "It can get busy, especially on weekends, so planning ahead helps",
+    "googleRating": 4.7,
+    "reviewCount": 659,
+    "placeId": "ChIJe0DIoBd-j4AROCMHEqdITsU"
+  },
+  "4074": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": "partial",
+    "equipment": [
+      "slide",
+      "climbing structure",
+      "water play"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 327,
+    "placeId": "ChIJZ0zooD1-j4ARzVFrHova9O4"
+  },
+  "4075": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 114,
+    "placeId": "ChIJF_JAG5yAhYARzm-uN-kzGXU"
+  },
+  "4081": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": "partial",
+    "equipment": [
+      "swings",
+      "climbing structure",
+      "sandbox"
+    ],
+    "crowdPatterns": "Seems to be a popular park especially for local daycares  nice little park that can get crowded fast on weekends. One of our favorite parks, go near lunch when the daycare leave for a quieter experience",
+    "googleRating": 4.7,
+    "reviewCount": 641,
+    "placeId": "ChIJW_cCS9B_j4ARigbJMyKq_x8"
+  },
+  "4082": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 5,
+    "reviewCount": 7,
+    "placeId": "ChIJ9y-zfBB_j4AR_z96MuXb3yE"
+  },
+  "4135": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4,
+    "reviewCount": 1,
+    "placeId": "ChIJ-0MREgB_j4ARD2KkKuMaJIs"
+  },
+  "4139": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 335,
+    "placeId": "ChIJ-zBUE-9-j4ARb0H6RqkWYgQ"
+  },
+  "4140": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide",
+      "sandbox"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 3.3,
+    "reviewCount": 41,
+    "placeId": "ChIJkUOlFgB_j4AR8MxwUHmAMrQ"
+  },
+  "4141": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "Beautiful park near by my house and not too crowded. Nocw and quite very beautiful very quiet and comfortable place to take your family this park is unsafe",
+    "googleRating": 4.2,
+    "reviewCount": 105,
+    "placeId": "ChIJ48Id-ih_j4ARDhQfbTiE-b4"
+  },
+  "4143": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 4,
+    "reviewCount": 2,
+    "placeId": "ChIJP7sJWih_j4ARerjvVnCxMyc"
+  },
+  "4144": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [
+      "baby swings",
+      "swings",
+      "slide"
+    ],
+    "crowdPatterns": "Not very busy most of the time but usually too windy for basketball. Muy céntrico y limpio basketball courts are not too crowded on a sunday morning",
+    "googleRating": 4.3,
+    "reviewCount": 150,
+    "placeId": "ChIJ1SQONsV-j4ARMzfZIQqvkcQ"
+  },
+  "4145": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": null,
+    "reviewCount": 0,
+    "placeId": "ChIJ96HILQB_j4ARc394sUxMUUg"
+  },
+  "4146": {
+    "ageRange": [
+      "toddler"
+    ],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "",
+    "googleRating": 3.4,
+    "reviewCount": 17,
+    "placeId": "ChIJA_wlgCR8j4AR_opGlLbtuq0"
+  },
+  "4147": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "This park is always busy and families have a good time here",
+    "googleRating": 4.5,
+    "reviewCount": 151,
+    "placeId": "ChIJeenXvv1-j4AR_MdCyvMMgko"
+  },
+  "4148": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "It's usually fairly empty and clean",
+    "googleRating": 4.4,
+    "reviewCount": 238,
+    "placeId": "ChIJAb3_HPt-j4ARJrLw5e7We-Y"
+  },
+  "4151": {
+    "ageRange": [
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 3.9,
+    "reviewCount": 20,
+    "placeId": "ChIJF_JAG5yAhYARHy66UOBu5_4"
+  },
+  "4152": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.5,
+    "reviewCount": 13,
+    "placeId": "ChIJics-h8l_j4ARpPijp3Lvi84"
+  },
+  "4175": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.4,
+    "reviewCount": 63,
+    "placeId": "ChIJEZ7eJp5-j4ARx0l2EtT1zqs"
+  },
+  "4176": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "But the community garden is nice, the views are spectacular and it's never busy. Not too busy or packed so it's perfect for alone time with your date and just enjoy the park together",
+    "googleRating": 4.4,
+    "reviewCount": 56,
+    "placeId": "ChIJmXgD-xN_j4ARjIgcFMOkH8I"
+  },
+  "4178": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.8,
+    "reviewCount": 33,
+    "placeId": "ChIJWxFX7lx_j4ARq-MI38GWC_U"
+  },
+  "4180": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.8,
+    "reviewCount": 37,
+    "placeId": "ChIJj_4ijaN_j4ARU6i9TaYQoHo"
+  },
+  "4181": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "But not really busy",
+    "googleRating": 4.3,
+    "reviewCount": 82,
+    "placeId": "ChIJM5JD8w9_j4ARVE5IBUu8vbE"
+  },
+  "4182": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Not crowded and pretty well maintained",
+    "googleRating": 4.5,
+    "reviewCount": 313,
+    "placeId": "ChIJA-xazBN_j4ARuoVQ_3vR7g8"
+  },
+  "4183": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "climbing structure"
+    ],
+    "crowdPatterns": "Playground was great but sadly it was crowded with many adults and children not wearing masks",
+    "googleRating": 4.3,
+    "reviewCount": 185,
+    "placeId": "ChIJlYCE149-j4ARnz1_LFtpOVU"
+  },
+  "4184": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "zip line"
+    ],
+    "crowdPatterns": "One of few playgrounds with open bathrooms amd the park overall is pretty clean amd empty",
+    "googleRating": 4.4,
+    "reviewCount": 389,
+    "placeId": "ChIJN2kj4zp_j4ARqiONDaNoCzY"
+  },
+  "4185": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "climbing structure"
+    ],
+    "crowdPatterns": "Bart runs loudly overhead but seems to quiet down the longer you are there",
+    "googleRating": 4.5,
+    "reviewCount": 523,
+    "placeId": "ChIJHWNyyyd8j4AReVyUjlIqcxk"
+  },
+  "4186": {
+    "ageRange": [],
+    "shade": "full sun",
+    "equipment": [],
+    "crowdPatterns": "It was peaceful and quiet a good amount, plus the little detail signs along the way were a good read. Quiet marsh paths lead to the next park, far from city noise",
+    "googleRating": 4.7,
+    "reviewCount": 26,
+    "placeId": "ChIJE8I4CG5_j4ARmZe4qWsqrak"
+  },
+  "4187": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [
+      "slide"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.4,
+    "reviewCount": 1370,
+    "placeId": "ChIJrW0PhpZ-j4ARuS1A2RkoHQM"
+  },
+  "4188": {
+    "ageRange": [],
+    "shade": null,
+    "equipment": [],
+    "crowdPatterns": "This park is a perfect spot to bring your family for a peaceful break after a busy day",
+    "googleRating": 4.1,
+    "reviewCount": 167,
+    "placeId": "ChIJucWjCBl_j4ARmKgeRmxde6Y"
+  },
+  "4616": {
+    "ageRange": [
+      "toddler",
+      "bigKids"
+    ],
+    "shade": null,
+    "equipment": [
+      "swings",
+      "slide",
+      "climbing structure",
+      "zip line",
+      "rock wall"
+    ],
+    "crowdPatterns": "",
+    "googleRating": 4.8,
+    "reviewCount": 33,
+    "placeId": "ChIJFTebVMJ-j4ARxZA13Z5k1Cg"
+  }
+}
