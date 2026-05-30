@@ -10,10 +10,15 @@ const PARK_TYPES = new Set(['neighborhood park or playground', 'mini park', 'reg
 // Human-readable names for Golden Gate Park sections (keyed by property_id)
 const GGP_NAMES = {
   '756665': 'Panhandle Playground',
-  '756666': '9th & Fulton Playground',
+  '756666': 'Blue Playground',
   '756668': 'Mothers Meadow Playground',
-  '756670': 'Boat Children\'s Play Area',
+  '756670': 'Lincoln & 45th Avenue Playground',
   '957231': 'Koret Children\'s Quarter',
+}
+
+// Coordinate overrides for parks where SF Open Data lat/lng is inaccurate
+const COORD_OVERRIDES = {
+  '756666': { lat: 37.7730636, lng: -122.4674444 }, // Blue Playground (SF Data is ~250m off)
 }
 
 // Map facility_type values → amenity flags
@@ -48,8 +53,8 @@ function parsePG(raw, amenities) {
     address: [raw.address, raw.zipcode].filter(Boolean).join(', ') || 'San Francisco, CA',
     neighborhood: raw.planning_neighborhood || '',
     propertyType: raw.propertytype || '',
-    lat: isNaN(lat) ? null : lat,
-    lng: isNaN(lng) ? null : lng,
+    lat: COORD_OVERRIDES[raw.property_id]?.lat ?? (isNaN(lat) ? null : lat),
+    lng: COORD_OVERRIDES[raw.property_id]?.lng ?? (isNaN(lng) ? null : lng),
     toddlerFriendly: a.toddlerFriendly  || false,
     hasRestrooms:    a.hasRestrooms     || false,
     hasParking:      a.hasParking       || false,
