@@ -100,11 +100,10 @@ export default function DetailPanel({ playground, entry, onSave, onClose }) {
             {copied ? '✓ Copied!' : '🔗 Share'}
           </button>
 
-          <div style={{ display: 'flex', gap: 14 }}>
-            <label className="visited-toggle" onClick={toggleFavorite}>
-              <div className={`visited-check favorite-check ${entry.favorite ? 'checked' : ''}`}>{entry.favorite ? '⭐' : '☆'}</div>
-              Favorite
-            </label>
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
+            <button onClick={toggleFavorite} className={`star-btn ${entry.favorite ? 'starred' : ''}`} title={entry.favorite ? 'Remove favorite' : 'Add to favorites'}>
+              {entry.favorite ? '★' : '☆'}
+            </button>
             <label className="visited-toggle" onClick={toggleVisited}>
               <div className={`visited-check ${entry.visited ? 'checked' : ''}`}>{entry.visited ? '✓' : ''}</div>
               Visited
